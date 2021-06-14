@@ -9,15 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet var backgroundView: UIView!
-    @IBOutlet var emailView: UIView!
-    @IBOutlet var passwordView: UIView!
-    @IBOutlet var eyeButton: UIButton!
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet weak private var backgroundView: UIView!
+    @IBOutlet weak private var emailView: UIView!
+    @IBOutlet weak private var passwordView: UIView!
+    @IBOutlet weak private var eyeButton: UIButton!
+    @IBOutlet weak private var emailTextField: UITextField!
+    @IBOutlet weak private var passwordTextField: UITextField!
+    @IBOutlet weak private var loginButton: UIButton!
     
-    var eyeFlipper = 0
+    private var eyeImage = EyeImageStatus.closedEye
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +27,6 @@ class LoginViewController: UIViewController {
         emailView.layer.cornerRadius = 20.0
         passwordView.layer.cornerRadius = 20.0
         loginButton.layer.cornerRadius = 20.0
-        
-        //adding gradint colors
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.systemPink.cgColor , UIColor.systemRed.cgColor ]
-        gradientLayer.frame = backgroundView.frame
-        //backgroundView.layer.addSublayer(gradientLayer)
         
         //to hide keyboard
         self.hideKeyboardWhenTappedAround()
@@ -49,14 +43,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
-        if(eyeFlipper == 0){
+        if(eyeImage == .closedEye){
             passwordTextField.isSecureTextEntry = false
-            eyeButton.setImage(UIImage(named: "closedEye"), for: .normal)
-            eyeFlipper = 1
+            eyeButton.setImage(UIImage(named: K.ImageName.closedEye), for: .normal)
+            eyeImage = .openedEye
         }else{
             passwordTextField.isSecureTextEntry = true
-            eyeButton.setImage(UIImage(named: "openEye"), for: .normal)
-            eyeFlipper = 0
+            eyeButton.setImage(UIImage(named: K.ImageName.openEye), for: .normal)
+            eyeImage = .closedEye
         }
     }
     
@@ -72,10 +66,20 @@ class LoginViewController: UIViewController {
             }
             navigationController?.pushViewController(destinationVC, animated: true)
         }else{
-            emailTextField.placeholder = "Email can't be empty"
-            passwordTextField.placeholder = "Password can't be empty"
-            print("empty entries for email and password")
+            emailTextField.placeholder = K.TextMessage.emptyEmailMessage
+            passwordTextField.placeholder = K.TextMessage.emptyPasswordMessage
         }
+    }
+}
+
+//MARK: - Add Color Gradient in UI Elements
+extension LoginViewController{
+    func addColorGradient(onView : UIView)  {
+        //adding gradint colors
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor.systemPink.cgColor , UIColor.systemRed.cgColor ]
+        gradientLayer.frame = backgroundView.frame
+        //onView.layer.addSublayer(gradientLayer)
     }
 }
 
@@ -91,6 +95,13 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+enum EyeImageStatus {
+    case openedEye
+    case closedEye
+}
+
+
 
 
 

@@ -14,4 +14,17 @@ struct K {
         static let profileScene = "profileScene"
         static let notificationScene = "notificationsScene"
     }
+    
+    struct ImageName {
+        static let closedEye = "closedEye"
+        static let openEye = "openEye"
+    }
+    
+    struct TextMessage {
+        static let emptyEmailMessage = "Email can't be empty"
+        static let emptyPasswordMessage = "Password can't be empty"
+        static let emptyMobileNoMessage = "Mobile No. can't be empty"
+        static let emptyNameMessage = "Name can't be empty"
+    }
+    
 }
