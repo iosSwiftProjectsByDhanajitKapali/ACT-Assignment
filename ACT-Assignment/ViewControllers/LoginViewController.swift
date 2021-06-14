@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func forgotButtonPressed(_ sender: UIButton) {
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
         
     }
     
