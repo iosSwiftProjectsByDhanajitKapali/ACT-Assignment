@@ -101,6 +101,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="brQ-5N-ExP"/>
+                                            <segue destination="OYx-U6-z8z" kind="show" id="ege-AK-7qf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -150,7 +151,7 @@
             </objects>
             <point key="canvasLocation" x="592.75362318840587" y="80.357142857142847"/>
         </scene>
-        <!--Item 2-->
+        <!--Home-->
         <scene sceneID="joS-cI-vgL">
             <objects>
                 <viewController id="ZEe-SI-MEv" sceneMemberID="viewController">
@@ -160,13 +161,13 @@
                         <viewLayoutGuide key="safeArea" id="1u6-lg-VGy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="08X-Us-ovZ"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="08X-Us-ovZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfb-Cg-NCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="921"/>
         </scene>
-        <!--Item-->
+        <!--Notifications-->
         <scene sceneID="cqT-dk-40c">
             <objects>
                 <viewController id="b3H-jb-fYz" sceneMemberID="viewController">
@@ -176,13 +177,13 @@
                         <viewLayoutGuide key="safeArea" id="mUt-uq-lQ7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="woR-wg-ase"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="woR-wg-ase"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-oB-4uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2609" y="921"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile-->
         <scene sceneID="qN2-fw-WyA">
             <objects>
                 <viewController id="R9T-89-fBC" sceneMemberID="viewController">
@@ -192,7 +193,7 @@
                         <viewLayoutGuide key="safeArea" id="Y4u-yX-fQr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rLN-Cs-aUU"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="rLN-Cs-aUU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUl-se-L4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,6 +203,7 @@
         <scene sceneID="qpj-n8-heJ">
             <objects>
                 <tabBarController id="OYx-U6-z8z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KQe-nV-DPP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="px0-0l-xHr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

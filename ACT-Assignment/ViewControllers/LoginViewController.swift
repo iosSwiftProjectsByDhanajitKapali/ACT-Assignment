@@ -21,13 +21,23 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        //managing the design of elements
         backgroundView.layer.cornerRadius = 20.0
         emailView.layer.cornerRadius = 20.0
         passwordView.layer.cornerRadius = 20.0
         loginButton.layer.cornerRadius = 20.0
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
         if(eyeFlipper == 0){
             passwordTextField.isSecureTextEntry = false
@@ -41,6 +51,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
+        
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
