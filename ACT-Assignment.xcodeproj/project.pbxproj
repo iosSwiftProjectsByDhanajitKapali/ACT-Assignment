@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0139AB0326771D4E00CD61CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB0226771D4E00CD61CC /* AppDelegate.swift */; };
 		0139AB0526771D4E00CD61CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB0426771D4E00CD61CC /* SceneDelegate.swift */; };
-		0139AB0726771D4E00CD61CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB0626771D4E00CD61CC /* ViewController.swift */; };
+		0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB0626771D4E00CD61CC /* LoginViewController.swift */; };
 		0139AB0A26771D4E00CD61CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0139AB0826771D4E00CD61CC /* Main.storyboard */; };
 		0139AB0D26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB0B26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld */; };
 		0139AB0F26771D5500CD61CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0139AB0E26771D5500CD61CC /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 		0139AAFF26771D4D00CD61CC /* ACT-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACT-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0139AB0226771D4E00CD61CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0139AB0426771D4E00CD61CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0139AB0626771D4E00CD61CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0139AB0626771D4E00CD61CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0139AB0926771D4E00CD61CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0139AB0C26771D4E00CD61CC /* ACT_Assignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ACT_Assignment.xcdatamodel; sourceTree = "<group>"; };
 		0139AB0E26771D5500CD61CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 			children = (
 				0139AB0226771D4E00CD61CC /* AppDelegate.swift */,
 				0139AB0426771D4E00CD61CC /* SceneDelegate.swift */,
-				0139AB0626771D4E00CD61CC /* ViewController.swift */,
-				0139AB0826771D4E00CD61CC /* Main.storyboard */,
+				0139AB3C26771EF100CD61CC /* ViewControllers */,
+				0139AB3B26771EE000CD61CC /* Scenes */,
 				0139AB0E26771D5500CD61CC /* Assets.xcassets */,
 				0139AB1026771D5500CD61CC /* LaunchScreen.storyboard */,
 				0139AB1326771D5500CD61CC /* Info.plist */,
@@ -129,6 +129,22 @@
 				0139AB2926771D5700CD61CC /* Info.plist */,
 			);
 			path = "ACT-AssignmentUITests";
+			sourceTree = "<group>";
+		};
+		0139AB3B26771EE000CD61CC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				0139AB0826771D4E00CD61CC /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		0139AB3C26771EF100CD61CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0139AB0626771D4E00CD61CC /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0139AB0726771D4E00CD61CC /* ViewController.swift in Sources */,
+				0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */,
 				0139AB0326771D4E00CD61CC /* AppDelegate.swift in Sources */,
 				0139AB0526771D4E00CD61CC /* SceneDelegate.swift in Sources */,
 				0139AB0D26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld in Sources */,
@@ -442,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ACT-Assignment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,6 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ACT-Assignment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
