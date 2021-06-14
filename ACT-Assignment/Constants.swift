@@ -9,9 +9,12 @@ import Foundation
 
 struct K {
     struct SceneID {
+        static let signupScene = "signupScene"
         static let profileHomeNotificationTabBar = "profileHomeNotificationTabBarScene"
         static let homeScene = "homeScene"
         static let profileScene = "profileScene"
         static let notificationScene = "notificationsScene"
     }
+    
+   
 }
