@@ -67,7 +67,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty{
-            //jump to profile scene
+            //jump to profile scene via TabBarController
+            let storyboard : UIStoryboard? = UIStoryboard(name: K.StoryBoardID.PROFILE_HOME_NOTIFICATION , bundle: nil)
             guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.PROFILE_HOME_NOTIFICATION_TAB_BAR ) else {
                 return
             }

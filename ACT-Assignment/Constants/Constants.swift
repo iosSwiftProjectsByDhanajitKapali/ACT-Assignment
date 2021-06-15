@@ -9,12 +9,19 @@ import Foundation
 import UIKit
 
 struct K {
+    struct StoryBoardID {
+        static let PROFILE_HOME_NOTIFICATION = "ProfileHomeNotification"
+    }
     struct SceneID {
         static let SIGNUP_SCENE = "signupScene"
         static let PROFILE_HOME_NOTIFICATION_TAB_BAR = "profileHomeNotificationTabBarScene"
         static let HOME_SCENE = "homeScene"
         static let PROFILE_SCENE = "profileScene"
         static let NOTIFICATION_SCENE = "notificationsScene"
+    }
+    
+    struct XibWithName {
+        static let SIDE_MENU = "SideMenu"
     }
     
     struct Image {
