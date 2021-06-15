@@ -30,6 +30,9 @@ class LoginViewController: UIViewController {
         
         //to hide keyboard
         self.hideKeyboardWhenTappedAround()
+        //adding delegates for  textfields
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +88,14 @@ extension LoginViewController{
         gradientLayer.frame = backgroundView.frame
         onView.layer.addSublayer(gradientLayer)
         onView.layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
+
+//MARK: - UITextField Delegate methods
+extension LoginViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder() // dismiss keyboard
+            return true
     }
 }
 

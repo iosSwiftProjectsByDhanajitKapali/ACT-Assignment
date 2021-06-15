@@ -228,7 +228,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7q1-Ku-07b">
                                                 <rect key="frame" x="10" y="3" width="344" height="44"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.90588235289999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

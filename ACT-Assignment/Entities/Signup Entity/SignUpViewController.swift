@@ -31,6 +31,12 @@ class SignUpViewController: UIViewController {
         
         //to hide keyboard
         self.hideKeyboardWhenTappedAround()
+        //setting delegates for textFields
+        nameTextField.delegate = self
+        mobileTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,4 +66,12 @@ class SignUpViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+}
+
+//MARK: - UITextField Delegate methods
+extension SignUpViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder() // dismiss keyboard
+            return true
+    }
 }
