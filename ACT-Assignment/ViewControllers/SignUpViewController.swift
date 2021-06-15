@@ -34,6 +34,16 @@ class SignUpViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     @IBAction func signupButtonPressed(_ sender: UIButton) {
         if let name = nameTextField.text, !name.isEmpty, let mobileNo = mobileTextField.text, !mobileNo.isEmpty, let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty {
         
