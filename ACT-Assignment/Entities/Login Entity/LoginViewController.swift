@@ -45,11 +45,11 @@ class LoginViewController: UIViewController {
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
         if(eyeImage == .closedEye){
             passwordTextField.isSecureTextEntry = false
-            eyeButton.setImage(UIImage(named: K.ImageName.closedEye), for: .normal)
+            eyeButton.setImage(K.Image.CLOSED_EYE_IMAGE , for: .normal)
             eyeImage = .openedEye
         }else{
             passwordTextField.isSecureTextEntry = true
-            eyeButton.setImage(UIImage(named: K.ImageName.openEye), for: .normal)
+            eyeButton.setImage(K.Image.OPEN_EYE_IMAGE , for: .normal)
             eyeImage = .closedEye
         }
     }
@@ -65,13 +65,13 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty{
             //jump to profile scene
-            guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.profileHomeNotificationTabBar ) else {
+            guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.PROFILE_HOME_NOTIFICATION_TAB_BAR ) else {
                 return
             }
             navigationController?.pushViewController(destinationVC, animated: true)
         }else{
-            emailTextField.placeholder = K.TextMessage.emptyEmailMessage
-            passwordTextField.placeholder = K.TextMessage.emptyPasswordMessage
+            emailTextField.placeholder = K.TextMessage.EMPTY_EMAIL_MESSAGE
+            passwordTextField.placeholder = K.TextMessage.EMPTY_PASSWORD_MESSAGE
         }
     }
 }
@@ -83,7 +83,8 @@ extension LoginViewController{
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemPink.cgColor , UIColor.systemRed.cgColor ]
         gradientLayer.frame = backgroundView.frame
-        //onView.layer.addSublayer(gradientLayer)
+        onView.layer.addSublayer(gradientLayer)
+        onView.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 

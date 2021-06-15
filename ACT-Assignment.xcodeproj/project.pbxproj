@@ -107,7 +107,7 @@
 			children = (
 				0139AB0226771D4E00CD61CC /* AppDelegate.swift */,
 				0139AB0426771D4E00CD61CC /* SceneDelegate.swift */,
-				0139AB3C26771EF100CD61CC /* ViewControllers */,
+				0139AB3C26771EF100CD61CC /* Entities */,
 				0139AB3B26771EE000CD61CC /* Scenes */,
 				0139AB0E26771D5500CD61CC /* Assets.xcassets */,
 				0139AB1026771D5500CD61CC /* LaunchScreen.storyboard */,
@@ -144,13 +144,21 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		0139AB3C26771EF100CD61CC /* ViewControllers */ = {
+		0139AB3C26771EF100CD61CC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				01BE256C267891DF00AF341E /* Login Entity */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		01BE256C267891DF00AF341E /* Login Entity */ = {
 			isa = PBXGroup;
 			children = (
 				0139AB0626771D4E00CD61CC /* LoginViewController.swift */,
 				01BE25432677970700AF341E /* SignUpViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "Login Entity";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
