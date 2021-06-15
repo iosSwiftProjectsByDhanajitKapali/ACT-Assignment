@@ -45,11 +45,11 @@ class LoginViewController: UIViewController {
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
         if(eyeImage == .closedEye){
             passwordTextField.isSecureTextEntry = false
-            eyeButton.setImage(UIImage(named: K.ImageName.closedEye), for: .normal)
+            eyeButton.setImage(K.Image.closedEye, for: .normal)
             eyeImage = .openedEye
         }else{
             passwordTextField.isSecureTextEntry = true
-            eyeButton.setImage(UIImage(named: K.ImageName.openEye), for: .normal)
+            eyeButton.setImage(K.Image.openEye, for: .normal)
             eyeImage = .closedEye
         }
     }
@@ -79,7 +79,8 @@ extension LoginViewController{
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.systemPink.cgColor , UIColor.systemRed.cgColor ]
         gradientLayer.frame = backgroundView.frame
-        //onView.layer.addSublayer(gradientLayer)
+        onView.layer.addSublayer(gradientLayer)
+        onView.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 

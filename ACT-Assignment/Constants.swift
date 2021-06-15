@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct K {
     struct SceneID {
@@ -15,9 +16,9 @@ struct K {
         static let notificationScene = "notificationsScene"
     }
     
-    struct ImageName {
-        static let closedEye = "closedEye"
-        static let openEye = "openEye"
+    struct Image {
+        static let closedEye = UIImage(named: "closedEye")
+        static let openEye = UIImage(named: "openEye")
     }
     
     struct TextMessage {
