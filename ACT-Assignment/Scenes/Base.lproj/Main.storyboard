@@ -361,7 +361,7 @@
         <!--Profile-->
         <scene sceneID="qN2-fw-WyA">
             <objects>
-                <viewController storyboardIdentifier="profileScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R9T-89-fBC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R9T-89-fBC" customClass="ProfileViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6lg-fu-A8L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

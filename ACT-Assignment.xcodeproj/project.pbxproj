@@ -18,6 +18,7 @@
 		0139AB2826771D5700CD61CC /* ACT_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB2726771D5700CD61CC /* ACT_AssignmentUITests.swift */; };
 		01BE252C2677769600AF341E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE252B2677769500AF341E /* Constants.swift */; };
 		01BE25442677970700AF341E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE25432677970700AF341E /* SignUpViewController.swift */; };
+		01BE25502678703A00AF341E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE254F2678703A00AF341E /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		0139AB2926771D5700CD61CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BE252B2677769500AF341E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		01BE25432677970700AF341E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		01BE254F2678703A00AF341E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				0139AB0626771D4E00CD61CC /* LoginViewController.swift */,
 				01BE25432677970700AF341E /* SignUpViewController.swift */,
+				01BE254F2678703A00AF341E /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				01BE252C2677769600AF341E /* Constants.swift in Sources */,
 				0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */,
 				0139AB0326771D4E00CD61CC /* AppDelegate.swift in Sources */,
+				01BE25502678703A00AF341E /* ProfileViewController.swift in Sources */,
 				0139AB0526771D4E00CD61CC /* SceneDelegate.swift in Sources */,
 				0139AB0D26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld in Sources */,
 			);
