@@ -165,7 +165,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SignUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-mb-f6m">
                                         <rect key="frame" x="125.5" y="10" width="133.5" height="52"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BnD-6y-T1x">
@@ -173,11 +173,11 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVi-bO-wY3">
                                                 <rect key="frame" x="10" y="3" width="344" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.98039215690000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8DA-MV-DwC"/>
                                             <constraint firstAttribute="bottom" secondItem="xVi-bO-wY3" secondAttribute="bottom" constant="3" id="E6o-V4-H83"/>
@@ -191,11 +191,11 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Cy-Do-eTR">
                                                 <rect key="frame" x="10" y="3" width="344" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.98039215690000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="7Cy-Do-eTR" firstAttribute="top" secondItem="7MO-L8-O5C" secondAttribute="top" constant="3" id="RYC-EQ-rEw"/>
                                             <constraint firstItem="7Cy-Do-eTR" firstAttribute="leading" secondItem="7MO-L8-O5C" secondAttribute="leading" constant="10" id="gQj-L9-WSQ"/>
@@ -209,11 +209,11 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1VF-Lz-bXI">
                                                 <rect key="frame" x="10" y="3" width="344" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.98039215690000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="1VF-Lz-bXI" secondAttribute="trailing" constant="10" id="Agi-TB-nsH"/>
                                             <constraint firstAttribute="bottom" secondItem="1VF-Lz-bXI" secondAttribute="bottom" constant="3" id="OjL-pt-SfV"/>
@@ -227,11 +227,11 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7q1-Ku-07b">
                                                 <rect key="frame" x="10" y="3" width="344" height="44"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.98039215690000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="7q1-Ku-07b" secondAttribute="trailing" constant="10" id="AsM-GD-nf0"/>
                                             <constraint firstItem="7q1-Ku-07b" firstAttribute="top" secondItem="tOV-oh-nLl" secondAttribute="top" constant="3" id="BUh-zT-emo"/>
@@ -261,7 +261,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have a account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgP-GE-8Sx">
                                                 <rect key="frame" x="0.0" y="0.0" width="194" height="35"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q08-qs-BPW">
@@ -275,7 +275,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.3294117647" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="zex-Qs-KVM" firstAttribute="leading" secondItem="NHZ-iD-rKj" secondAttribute="leading" constant="35" id="0os-Ux-QPd"/>
                                     <constraint firstItem="B8F-3a-c8o" firstAttribute="top" secondItem="7MO-L8-O5C" secondAttribute="bottom" constant="20" id="2OP-Kb-E9a"/>
@@ -301,7 +301,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="61h-rc-ZrE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="61h-rc-ZrE" firstAttribute="trailing" secondItem="NHZ-iD-rKj" secondAttribute="trailing" constant="15" id="2Nm-OU-WOl"/>
                             <constraint firstItem="61h-rc-ZrE" firstAttribute="bottom" secondItem="NHZ-iD-rKj" secondAttribute="bottom" constant="15" id="4xm-sG-hbL"/>
