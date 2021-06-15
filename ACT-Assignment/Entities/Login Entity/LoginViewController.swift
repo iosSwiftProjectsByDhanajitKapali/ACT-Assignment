@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         //jump to SignUp scene
-        guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.signupScene ) else {
+        guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.SIGNUP_SCENE ) else {
             return
         }
         navigationController?.pushViewController(destinationVC, animated: true)

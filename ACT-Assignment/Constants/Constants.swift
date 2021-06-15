@@ -10,6 +10,7 @@ import UIKit
 
 struct K {
     struct SceneID {
+        static let SIGNUP_SCENE = "signupScene"
         static let PROFILE_HOME_NOTIFICATION_TAB_BAR = "profileHomeNotificationTabBarScene"
         static let HOME_SCENE = "homeScene"
         static let PROFILE_SCENE = "profileScene"
