@@ -177,7 +177,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.95544415709999997" green="0.90414220089999997" blue="0.89683693649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8DA-MV-DwC"/>
                                             <constraint firstAttribute="bottom" secondItem="xVi-bO-wY3" secondAttribute="bottom" constant="3" id="E6o-V4-H83"/>
@@ -195,7 +195,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.90588235289999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="7Cy-Do-eTR" firstAttribute="top" secondItem="7MO-L8-O5C" secondAttribute="top" constant="3" id="RYC-EQ-rEw"/>
                                             <constraint firstItem="7Cy-Do-eTR" firstAttribute="leading" secondItem="7MO-L8-O5C" secondAttribute="leading" constant="10" id="gQj-L9-WSQ"/>
@@ -213,7 +213,7 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.90588235289999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="1VF-Lz-bXI" secondAttribute="trailing" constant="10" id="Agi-TB-nsH"/>
                                             <constraint firstAttribute="bottom" secondItem="1VF-Lz-bXI" secondAttribute="bottom" constant="3" id="OjL-pt-SfV"/>
@@ -231,7 +231,7 @@
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.90588235289999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="7q1-Ku-07b" secondAttribute="trailing" constant="10" id="AsM-GD-nf0"/>
                                             <constraint firstItem="7q1-Ku-07b" firstAttribute="top" secondItem="tOV-oh-nLl" secondAttribute="top" constant="3" id="BUh-zT-emo"/>
@@ -301,7 +301,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="61h-rc-ZrE"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="61h-rc-ZrE" firstAttribute="trailing" secondItem="NHZ-iD-rKj" secondAttribute="trailing" constant="15" id="2Nm-OU-WOl"/>
                             <constraint firstItem="61h-rc-ZrE" firstAttribute="bottom" secondItem="NHZ-iD-rKj" secondAttribute="bottom" constant="15" id="4xm-sG-hbL"/>
