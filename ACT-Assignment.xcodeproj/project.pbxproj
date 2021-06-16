@@ -22,6 +22,7 @@
 		01BE26122678C76100AF341E /* ProfileHomeNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BE26112678C76100AF341E /* ProfileHomeNotification.storyboard */; };
 		01BE26312678D0AE00AF341E /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE26302678D0AE00AF341E /* SideMenu.swift */; };
 		01BE26362678D0C200AF341E /* SideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BE26352678D0C200AF341E /* SideMenu.xib */; };
+		01BE263C2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE263B2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		01BE26112678C76100AF341E /* ProfileHomeNotification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileHomeNotification.storyboard; sourceTree = "<group>"; };
 		01BE26302678D0AE00AF341E /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		01BE26352678D0C200AF341E /* SideMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenu.xib; sourceTree = "<group>"; };
+		01BE263B2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeNotificationTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				01BE26112678C76100AF341E /* ProfileHomeNotification.storyboard */,
+				01BE263B2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift */,
 			);
 			path = ProfleHomeNotificationStoryBoard;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BE25B72678AB8300AF341E /* SignUpViewController.swift in Sources */,
+				01BE263C2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift in Sources */,
 				01BE252C2677769600AF341E /* Constants.swift in Sources */,
 				0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */,
 				01BE26312678D0AE00AF341E /* SideMenu.swift in Sources */,

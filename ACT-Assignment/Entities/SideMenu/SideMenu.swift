@@ -12,17 +12,18 @@ class SideMenu: UIView {
     let kCONTENT_XIB_NAME = "PopUpViewTwo"
     var view: UIView!
     
+    @IBOutlet var userName: UILabel!
+    
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        print("from SideMenuVC-> Logout button pressed")
+    }
+    
+    //Boilerplate to load xib
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib()
     }
-    
-//    init(frame: CGRect, data : PopUpModel) {
-//        super.init(frame: frame)
-//        loadViewFromNib()
-//        populatePopUp(popUpData: data)
-//    }
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
