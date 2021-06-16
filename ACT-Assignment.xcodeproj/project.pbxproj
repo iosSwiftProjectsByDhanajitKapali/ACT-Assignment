@@ -16,6 +16,7 @@
 		0139AB1226771D5500CD61CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0139AB1026771D5500CD61CC /* LaunchScreen.storyboard */; };
 		0139AB1D26771D5700CD61CC /* ACT_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB1C26771D5700CD61CC /* ACT_AssignmentTests.swift */; };
 		0139AB2826771D5700CD61CC /* ACT_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB2726771D5700CD61CC /* ACT_AssignmentUITests.swift */; };
+		01BE252C2677769600AF341E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE252B2677769500AF341E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0139AB2326771D5700CD61CC /* ACT-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ACT-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0139AB2726771D5700CD61CC /* ACT_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACT_AssignmentUITests.swift; sourceTree = "<group>"; };
 		0139AB2926771D5700CD61CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01BE252B2677769500AF341E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +105,13 @@
 			children = (
 				0139AB0226771D4E00CD61CC /* AppDelegate.swift */,
 				0139AB0426771D4E00CD61CC /* SceneDelegate.swift */,
-				0139AB3C26771EF100CD61CC /* ViewControllers */,
+				0139AB3C26771EF100CD61CC /* Entities */,
 				0139AB3B26771EE000CD61CC /* Scenes */,
 				0139AB0E26771D5500CD61CC /* Assets.xcassets */,
 				0139AB1026771D5500CD61CC /* LaunchScreen.storyboard */,
 				0139AB1326771D5500CD61CC /* Info.plist */,
 				0139AB0B26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld */,
+				01BE252B2677769500AF341E /* Constants.swift */,
 			);
 			path = "ACT-Assignment";
 			sourceTree = "<group>";
@@ -139,12 +142,20 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		0139AB3C26771EF100CD61CC /* ViewControllers */ = {
+		0139AB3C26771EF100CD61CC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				01BE256C267891DF00AF341E /* Login Entity */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		01BE256C267891DF00AF341E /* Login Entity */ = {
 			isa = PBXGroup;
 			children = (
 				0139AB0626771D4E00CD61CC /* LoginViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "Login Entity";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BE252C2677769600AF341E /* Constants.swift in Sources */,
 				0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */,
 				0139AB0326771D4E00CD61CC /* AppDelegate.swift in Sources */,
 				0139AB0526771D4E00CD61CC /* SceneDelegate.swift in Sources */,
