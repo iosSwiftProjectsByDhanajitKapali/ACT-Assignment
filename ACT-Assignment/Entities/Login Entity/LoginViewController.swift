@@ -30,7 +30,8 @@ class LoginViewController: UIViewController {
         
         //to hide keyboard
         self.hideKeyboardWhenTappedAround()
-        //adding delegates for  textfields
+        
+        //setting delegates of textFields
         emailTextField.delegate = self
         passwordTextField.delegate = self
     
@@ -80,25 +81,14 @@ class LoginViewController: UIViewController {
     }
 }
 
-//MARK: - Add Color Gradient in UI Elements
-extension LoginViewController{
-    func addColorGradient(onView : UIView)  {
-        //adding gradint colors
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [UIColor.systemPink.cgColor , UIColor.systemRed.cgColor ]
-        gradientLayer.frame = backgroundView.frame
-        onView.layer.addSublayer(gradientLayer)
-        onView.layer.insertSublayer(gradientLayer, at: 0)
-    }
-}
-
-//MARK: - UITextField Delegate methods
+//MARK: - UITextFieldDelegate Methods
 extension LoginViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             textField.resignFirstResponder() // dismiss keyboard
             return true
     }
 }
+
 
 //MARK: - Hide Keyboard When Tapped Around
 extension UIViewController {
