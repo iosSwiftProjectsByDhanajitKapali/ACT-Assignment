@@ -11,9 +11,11 @@ import UIKit
 struct K {
     struct StoryBoardID {
         static let PROFILE_HOME_NOTIFICATION = "ProfileHomeNotification"
+        static let MAIN = "Main"
     }
     struct SceneID {
         static let SIGNUP_SCENE = "signupScene"
+        static let LOGIN_SCENE = "loginScene"
         static let PROFILE_HOME_NOTIFICATION_TAB_BAR = "profileHomeNotificationTabBarScene"
         static let HOME_SCENE = "homeScene"
         static let PROFILE_SCENE = "profileScene"
@@ -25,8 +27,14 @@ struct K {
     }
     
     struct Image {
-        static let CLOSED_EYE_IMAGE = UIImage(named: "closedEye")
-        static let OPEN_EYE_IMAGE = UIImage(named: "openEye")
+        struct AssetImage{
+            static let CLOSED_EYE_IMAGE = UIImage(named: "closedEye")
+            static let OPEN_EYE_IMAGE = UIImage(named: "openEye")
+        }
+       
+        struct SystemImage {
+            static let LIST_DASH = UIImage(systemName:"list.dash")
+        }
     }
     
     struct TextMessage {

@@ -48,11 +48,11 @@ class LoginViewController: UIViewController {
     @IBAction func eyeButtonPressed(_ sender: UIButton) {
         if(eyeImage == .closedEye){
             passwordTextField.isSecureTextEntry = false
-            eyeButton.setImage(K.Image.CLOSED_EYE_IMAGE , for: .normal)
+            eyeButton.setImage(K.Image.AssetImage.CLOSED_EYE_IMAGE , for: .normal)
             eyeImage = .openedEye
         }else{
             passwordTextField.isSecureTextEntry = true
-            eyeButton.setImage(K.Image.OPEN_EYE_IMAGE , for: .normal)
+            eyeButton.setImage(K.Image.AssetImage.OPEN_EYE_IMAGE , for: .normal)
             eyeImage = .closedEye
         }
     }

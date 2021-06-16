@@ -8,15 +8,18 @@
 import UIKit
 
 class SideMenu: UIView {
-
-    let kCONTENT_XIB_NAME = "PopUpViewTwo"
-    var view: UIView!
     
     @IBOutlet var userName: UILabel!
     
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         print("from SideMenuVC-> Logout button pressed")
+        //jump to login scene
+        let storyboard : UIStoryboard? = UIStoryboard(name: K.StoryBoardID.MAIN , bundle: nil)
+        guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.LOGIN_SCENE ) else {
+            return
+        }
+        //navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     //Boilerplate to load xib
