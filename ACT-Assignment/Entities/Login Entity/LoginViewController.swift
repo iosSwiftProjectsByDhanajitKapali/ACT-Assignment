@@ -88,13 +88,6 @@ extension LoginViewController : UITextFieldDelegate {
     }
 }
 
-//MARK: - UITextField Delegate methods
-extension LoginViewController : UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder() // dismiss keyboard
-            return true
-    }
-}
 
 //MARK: - Hide Keyboard When Tapped Around
 extension UIViewController {
