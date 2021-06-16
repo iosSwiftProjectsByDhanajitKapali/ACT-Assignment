@@ -28,6 +28,7 @@ struct K {
     
     struct Image {
         struct AssetImage{
+            static let MALE_USER =  UIImage(named: "male-user")
             static let CLOSED_EYE_IMAGE = UIImage(named: "closedEye")
             static let OPEN_EYE_IMAGE = UIImage(named: "openEye")
         }

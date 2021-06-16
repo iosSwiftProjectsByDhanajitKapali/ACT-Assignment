@@ -7,30 +7,59 @@
 
 import UIKit
 
-class SideMenu: UIView {
+protocol SideMenuDelegate {
+    func LogoutButtonPress()
+    func menuButtonPressed(_ ofTitle : String?)
+    func dismissMenuWithTouch()
+}
+class SideMenu: UIView{
     
+    @IBOutlet var xibMainView: UIView!
+    @IBOutlet var mainView: UIView!
+    @IBOutlet var imageAndNameContainerView: UIView!
+    @IBOutlet var userImageView: UIImageView!
     @IBOutlet var userName: UILabel!
     
+    var delegate : SideMenuDelegate?
+    
+    @IBAction func buttonOnePressed(_ sender: UIButton) {
+        delegate?.menuButtonPressed(sender.title(for: .normal))
+    }
+    
+    @IBAction func buttonTwoPressed(_ sender: UIButton) {
+        delegate?.menuButtonPressed(sender.title(for: .normal))
+    }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
-        print("from SideMenuVC-> Logout button pressed")
-        //jump to login scene
-        let storyboard : UIStoryboard? = UIStoryboard(name: K.StoryBoardID.MAIN , bundle: nil)
-        guard let destinationVC = storyboard?.instantiateViewController(identifier: K.SceneID.LOGIN_SCENE ) else {
-            return
-        }
-        //navigationController?.pushViewController(destinationVC, animated: true)
+       
+        delegate?.LogoutButtonPress()
     }
     
     //Boilerplate to load xib
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib()
+        addDesignToMenu()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib()
+    }
+    
+    func addDesignToMenu(){
+        //make the bottomRight and topRight corners round
+        mainView.clipsToBounds = true
+        mainView.layer.cornerRadius = 20.0
+        mainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        
+        //make the bottomRight, topRight, bottom left corners round
+        imageAndNameContainerView.clipsToBounds = true
+        imageAndNameContainerView.layer.cornerRadius = 20.0
+        imageAndNameContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
+        
+        resizeImageView(for: K.Image.AssetImage.MALE_USER!)
+        
     }
     
     func loadViewFromNib(){
@@ -40,6 +69,36 @@ class SideMenu: UIView {
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         view.frame = bounds
         addSubview(view)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            if touch.view == self.xibMainView {
+                //calling delegate to dismiss menu
+                delegate?.dismissMenuWithTouch()
+            } else {
+                return
+            }
+        }
+    }
+   
+    
+    func resizeImageView(for image : UIImage?)  {
+        guard image != nil else {
+            return
+        }
+        
+        userImageView.heightAnchor.constraint(equalTo: userImageView.widthAnchor, multiplier: 1.0).isActive = true
+        userImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let constraint = NSLayoutConstraint(
+            item:  userImageView!  , attribute: NSLayoutConstraint.Attribute.height,
+            relatedBy: NSLayoutConstraint.Relation.equal,
+            toItem: userImageView  , attribute: NSLayoutConstraint.Attribute.width,
+            multiplier: image!.size.height / image!.size.width, constant: 0.0)
+        
+        userImageView.addConstraint(constraint)
+        
     }
     
 

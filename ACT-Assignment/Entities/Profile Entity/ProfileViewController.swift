@@ -8,13 +8,17 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        print("welcome to Profle View")
+        //print("welcome to Profle View")
+            
+        
     }
     
 
 
 }
+
+

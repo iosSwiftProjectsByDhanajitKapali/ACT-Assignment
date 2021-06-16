@@ -9,7 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenu" customModule="ACT_Assignment" customModuleProvider="target">
             <connections>
+                <outlet property="imageAndNameContainerView" destination="pEK-oS-19l" id="Fam-IQ-yFa"/>
+                <outlet property="mainView" destination="irF-WW-Yb8" id="gFb-ky-g93"/>
+                <outlet property="userImageView" destination="ReH-yk-BlM" id="BsX-d8-QZW"/>
                 <outlet property="userName" destination="s5F-GE-1nb" id="J1g-xp-SDr"/>
+                <outlet property="xibMainView" destination="iN0-l3-epB" id="8hT-Pr-S17"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,8 +27,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEK-oS-19l">
                             <rect key="frame" x="0.0" y="0.0" width="314" height="180"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male-user" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-yk-BlM">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="male-user" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-yk-BlM">
                                     <rect key="frame" x="109" y="10" width="96" height="96"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="ReH-yk-BlM" secondAttribute="height" multiplier="1:1" id="NxL-ty-qgQ"/>
+                                        <constraint firstAttribute="width" constant="96" id="hJR-Hm-Tcj"/>
+                                    </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First And Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5F-GE-1nb">
                                     <rect key="frame" x="65.5" y="139" width="183" height="26"/>
@@ -39,6 +47,7 @@
                                 <constraint firstAttribute="height" constant="180" id="GYo-1N-gME"/>
                                 <constraint firstItem="ReH-yk-BlM" firstAttribute="top" secondItem="pEK-oS-19l" secondAttribute="top" constant="10" id="JWu-fP-UhN"/>
                                 <constraint firstItem="ReH-yk-BlM" firstAttribute="centerX" secondItem="pEK-oS-19l" secondAttribute="centerX" id="MH9-hF-N40"/>
+                                <constraint firstItem="s5F-GE-1nb" firstAttribute="top" secondItem="ReH-yk-BlM" secondAttribute="bottom" constant="33" id="ij0-8I-ve8"/>
                                 <constraint firstItem="s5F-GE-1nb" firstAttribute="centerX" secondItem="pEK-oS-19l" secondAttribute="centerX" id="vzY-AW-y9V"/>
                             </constraints>
                         </view>
@@ -51,6 +60,9 @@
                             <state key="normal" title="Button One">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="buttonOnePressed:" destination="-1" eventType="touchUpInside" id="UXk-od-UBw"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4q-xv-TEH">
                             <rect key="frame" x="10" y="280" width="294" height="45"/>
@@ -61,6 +73,9 @@
                             <state key="normal" title="Button Two">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="buttonTwoPressed:" destination="-1" eventType="touchUpInside" id="dRh-97-1gt"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIa-JF-HCW">
                             <rect key="frame" x="10" y="347" width="294" height="45"/>

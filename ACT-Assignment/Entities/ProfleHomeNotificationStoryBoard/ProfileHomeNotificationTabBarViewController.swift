@@ -14,8 +14,7 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("via tab bar")
-        
+        //changing the navigation bar back button with menu image, clicking it XIB for Menu will appear
         let menuButton = UIBarButtonItem(image: K.Image.SystemImage.LIST_DASH , style: .done, target: self, action: #selector(didTapMenuButton))
         navigationItem.leftBarButtonItem  = menuButton
     }
@@ -31,6 +30,7 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
             let view = SideMenu(frame: self.view.bounds)
             view.tag = 1
             self.view.addSubview(view)
+            view.delegate = self
             menuFlipper = .isOpened
         }else{
             if let viewWithTag = self.view.viewWithTag(1){
@@ -41,8 +41,26 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
         }
        
     } //:didTapMenuButton
+
+}
+
+//MARK: - SideMenu Delegates
+extension ProfileHomeNotificationTabBarViewController : SideMenuDelegate {
+    func dismissMenuWithTouch() {
+        if let viewWithTag = self.view.viewWithTag(1){
+            viewWithTag.removeFromSuperview()
+            menuFlipper = .isClosed
+        }
+    }
     
-
-  
-
+    func menuButtonPressed(_ ofTitle: String?) {
+        if let buttonTitle = ofTitle{
+            print(buttonTitle)
+        }
+    }
+    
+    func LogoutButtonPress() {
+        //pop to login scene
+        navigationController?.popViewController(animated: true)
+    }
 }
