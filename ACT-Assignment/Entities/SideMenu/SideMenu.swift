@@ -19,8 +19,13 @@ class SideMenu: UIView{
     @IBOutlet var imageAndNameContainerView: UIView!
     @IBOutlet var userImageView: UIImageView!
     @IBOutlet var userName: UILabel!
+    @IBOutlet var tableViewForMenuButtons: UITableView!
     
     var delegate : SideMenuDelegate?
+    
+//    var menuButtonTitleArr = [String]()
+//    menuButtonTitleArr.append("Button One")
+    
     
     @IBAction func buttonOnePressed(_ sender: UIButton) {
         delegate?.menuButtonPressed(sender.title(for: .normal))
@@ -114,5 +119,19 @@ class SideMenu: UIView{
     }
     
 
+}
+
+//MARK: - UITableView DataSource and Delegate Methods
+extension SideMenu : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableViewForMenuButtons.dequeueReusableCell(withIdentifier: "lol")
+        return cell!
+    }
+    
+    
 }
 

@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="imageAndNameContainerView" destination="pEK-oS-19l" id="Fam-IQ-yFa"/>
                 <outlet property="mainView" destination="irF-WW-Yb8" id="gFb-ky-g93"/>
+                <outlet property="tableViewForMenuButtons" destination="fkN-TD-hmg" id="rgF-cD-mtR"/>
                 <outlet property="userImageView" destination="ReH-yk-BlM" id="BsX-d8-QZW"/>
                 <outlet property="userName" destination="s5F-GE-1nb" id="J1g-xp-SDr"/>
                 <outlet property="xibMainView" destination="iN0-l3-epB" id="8hT-Pr-S17"/>
@@ -51,60 +52,20 @@
                                 <constraint firstItem="s5F-GE-1nb" firstAttribute="centerX" secondItem="pEK-oS-19l" secondAttribute="centerX" id="vzY-AW-y9V"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuN-oO-V77">
-                            <rect key="frame" x="10" y="215" width="294" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="TPl-YY-Mq0"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                            <state key="normal" title="Button One">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="buttonOnePressed:" destination="-1" eventType="touchUpInside" id="UXk-od-UBw"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4q-xv-TEH">
-                            <rect key="frame" x="10" y="280" width="294" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="nLH-q1-z4D"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                            <state key="normal" title="Button Two">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="buttonTwoPressed:" destination="-1" eventType="touchUpInside" id="dRh-97-1gt"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIa-JF-HCW">
-                            <rect key="frame" x="10" y="347" width="294" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="W3m-zN-sxc"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                            <state key="normal" title="Logout">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="logoutButtonPressed:" destination="-1" eventType="touchUpInside" id="qRL-yF-lOT"/>
-                            </connections>
-                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fkN-TD-hmg">
+                            <rect key="frame" x="5" y="195" width="304" height="618"/>
+                            <color key="backgroundColor" red="0.61339461799999995" green="0.71734589339999999" blue="0.94056087730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" red="0.61339461799999995" green="0.71734589339999999" blue="0.94056087730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="PIa-JF-HCW" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" constant="10" id="42D-EU-z1P"/>
-                        <constraint firstAttribute="trailing" secondItem="UuN-oO-V77" secondAttribute="trailing" constant="10" id="7b1-ZZ-4aK"/>
-                        <constraint firstItem="n4q-xv-TEH" firstAttribute="top" secondItem="UuN-oO-V77" secondAttribute="bottom" constant="20" id="87C-cS-f98"/>
-                        <constraint firstItem="UuN-oO-V77" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" constant="10" id="8eW-zT-JKm"/>
+                        <constraint firstItem="fkN-TD-hmg" firstAttribute="top" secondItem="pEK-oS-19l" secondAttribute="bottom" constant="15" id="62X-JW-2g3"/>
                         <constraint firstItem="pEK-oS-19l" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" id="CB5-Zt-drg"/>
-                        <constraint firstAttribute="trailing" secondItem="n4q-xv-TEH" secondAttribute="trailing" constant="10" id="FFR-6D-c7X"/>
-                        <constraint firstAttribute="trailing" secondItem="PIa-JF-HCW" secondAttribute="trailing" constant="10" id="LtF-hs-T0h"/>
+                        <constraint firstAttribute="bottom" secondItem="fkN-TD-hmg" secondAttribute="bottom" constant="5" id="UcN-gx-58g"/>
                         <constraint firstItem="pEK-oS-19l" firstAttribute="top" secondItem="irF-WW-Yb8" secondAttribute="top" id="Wth-VZ-pRW"/>
                         <constraint firstAttribute="trailing" secondItem="pEK-oS-19l" secondAttribute="trailing" id="fU6-YV-bif"/>
-                        <constraint firstItem="PIa-JF-HCW" firstAttribute="top" secondItem="n4q-xv-TEH" secondAttribute="bottom" constant="22" id="hLY-Lu-pM1"/>
-                        <constraint firstItem="n4q-xv-TEH" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" constant="10" id="kMj-6y-T9I"/>
-                        <constraint firstItem="UuN-oO-V77" firstAttribute="top" secondItem="pEK-oS-19l" secondAttribute="bottom" constant="35" id="qjZ-kd-szH"/>
+                        <constraint firstItem="fkN-TD-hmg" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" constant="5" id="ipE-ZZ-RMO"/>
+                        <constraint firstAttribute="trailing" secondItem="fkN-TD-hmg" secondAttribute="trailing" constant="5" id="nzM-Ot-eqc"/>
                     </constraints>
                 </view>
             </subviews>
