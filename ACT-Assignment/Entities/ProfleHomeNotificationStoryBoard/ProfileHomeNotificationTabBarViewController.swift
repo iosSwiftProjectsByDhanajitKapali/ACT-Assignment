@@ -24,23 +24,31 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
         case isClosed
     }
     
+    //Opening the Menu and closing it, if it is already open
     @objc func didTapMenuButton() {
         if(menuFlipper == .isClosed){
-            //loading the XIB into our view
-            let view = SideMenu(frame: self.view.bounds)
-            view.tag = 1
-            self.view.addSubview(view)
-            view.delegate = self
-            menuFlipper = .isOpened
+            showMenu()
         }else{
-            if let viewWithTag = self.view.viewWithTag(1){
-                viewWithTag.removeFromSuperview()
-                menuFlipper = .isClosed
-            }
-            
+            hideMenu()
         }
        
     } //:didTapMenuButton
+    
+    func hideMenu(){
+        if let viewWithTag = self.view.viewWithTag(1){
+            viewWithTag.removeFromSuperview()
+            menuFlipper = .isClosed
+        }
+    }
+    
+    func showMenu(){
+        //loading the XIB into our view
+        let view = SideMenu(frame: self.view.bounds)
+        view.tag = 1
+        self.view.addSubview(view)
+        view.delegate = self
+        menuFlipper = .isOpened
+    }
 
 }
 
@@ -56,11 +64,12 @@ extension ProfileHomeNotificationTabBarViewController : SideMenuDelegate {
     func menuButtonPressed(_ ofTitle: String?) {
         if let buttonTitle = ofTitle{
             print(buttonTitle)
+            
+            //if Button pressed in Menu is Logout Button
+            if buttonTitle == "Logout"{
+                navigationController?.popViewController(animated: true)
+            }
         }
     }
     
-    func LogoutButtonPress() {
-        //pop to login scene
-        navigationController?.popViewController(animated: true)
-    }
 }

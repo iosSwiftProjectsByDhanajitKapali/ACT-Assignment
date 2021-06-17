@@ -24,6 +24,11 @@ struct K {
     
     struct XibWithName {
         static let SIDE_MENU = "SideMenu"
+        static let MENU_BUTTON_CELL = "MenuButtonCell"
+    }
+    
+    struct TableViewCellID {
+        static let MENU_BUTTON_CELL_ID = "menuButtonCellID"
     }
     
     struct Image {

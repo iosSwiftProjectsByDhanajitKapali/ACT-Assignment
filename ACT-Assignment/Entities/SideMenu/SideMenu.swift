@@ -8,7 +8,6 @@
 import UIKit
 
 protocol SideMenuDelegate {
-    func LogoutButtonPress()
     func menuButtonPressed(_ ofTitle : String?)
     func dismissMenuWithTouch()
 }
@@ -23,33 +22,28 @@ class SideMenu: UIView{
     
     var delegate : SideMenuDelegate?
     
-//    var menuButtonTitleArr = [String]()
-//    menuButtonTitleArr.append("Button One")
-    
-    
-    @IBAction func buttonOnePressed(_ sender: UIButton) {
-        delegate?.menuButtonPressed(sender.title(for: .normal))
-    }
-    
-    @IBAction func buttonTwoPressed(_ sender: UIButton) {
-        delegate?.menuButtonPressed(sender.title(for: .normal))
-    }
-    
-    @IBAction func logoutButtonPressed(_ sender: UIButton) {
-       
-        delegate?.LogoutButtonPress()
-    }
+    var menuButtonTitleArr = [String]()
+
     
     //Boilerplate to load xib
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib()
+        
+        setAllDelegates()
+        populateTableView()
         addDesignToMenu()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib()
+    }
+    
+    func setAllDelegates(){
+        tableViewForMenuButtons.delegate = self
+        tableViewForMenuButtons.dataSource = self
     }
     
     func addDesignToMenu(){
@@ -88,6 +82,7 @@ class SideMenu: UIView{
         addSubview(view)
     }
     
+    //function to dismiss menu when touched outside the Menu
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             if touch.view == self.xibMainView {
@@ -100,6 +95,7 @@ class SideMenu: UIView{
     }
    
     
+    //function to resize the user-imageView according to the image
     func resizeImageView(for image : UIImage?)  {
         guard image != nil else {
             return
@@ -121,17 +117,48 @@ class SideMenu: UIView{
 
 }
 
+//MARK: - MenuButtonCell Delegate
+extension SideMenu : MenuButtonCellDelegate{
+    func menuButtonPressed(ofTitle: String?) {
+        if let title = ofTitle{
+            delegate?.menuButtonPressed(title)
+        }
+    }
+}
+
 //MARK: - UITableView DataSource and Delegate Methods
 extension SideMenu : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        let rows = menuButtonTitleArr.count
+        return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewForMenuButtons.dequeueReusableCell(withIdentifier: "lol")
-        return cell!
+        let cell = tableViewForMenuButtons.dequeueReusableCell(withIdentifier: K.TableViewCellID.MENU_BUTTON_CELL_ID , for: indexPath) as! MenuButtonCell
+        cell.buttonTitle.setTitle(menuButtonTitleArr[indexPath.row], for: .normal)
+        cell.delegate = self
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 55
+    }
+    
+    func populateTableView(){
+        tableViewForMenuButtons.allowsSelection = true
+        tableViewForMenuButtons.register(UINib(nibName: K.XibWithName.MENU_BUTTON_CELL, bundle: nil), forCellReuseIdentifier: K.TableViewCellID.MENU_BUTTON_CELL_ID)
+        
+        //Populating the menu buttons with random titles
+        menuButtonTitleArr.append("Button One")
+        menuButtonTitleArr.append("Button Two")
+        menuButtonTitleArr.append("Button Three")
+        menuButtonTitleArr.append("Button Four")
+        menuButtonTitleArr.append("Logout")
+        
+    }
 }
 
