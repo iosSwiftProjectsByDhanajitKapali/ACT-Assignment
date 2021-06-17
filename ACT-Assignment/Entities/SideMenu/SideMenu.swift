@@ -58,6 +58,13 @@ class SideMenu: UIView{
         imageAndNameContainerView.layer.cornerRadius = 20.0
         imageAndNameContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
         
+        //animating the SideMenu
+        mainView.center.x = -280
+        UIView.animate(withDuration: 0.5) {
+            self.mainView.center.x = 0
+        }
+        
+        //resixing the imageView according to image
         resizeImageView(for: K.Image.AssetImage.MALE_USER!)
         
     }

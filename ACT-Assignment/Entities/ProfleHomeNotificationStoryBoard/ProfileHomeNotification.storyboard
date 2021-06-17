@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="77" y="-1338"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="pf3-xG-0my">
             <objects>
                 <viewController id="OOw-ib-0AO" sceneMemberID="viewController">
@@ -47,14 +47,14 @@
                         <viewLayoutGuide key="safeArea" id="Q7y-vL-LAG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5G9-8P-G74"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="5G9-8P-G74"/>
                     <navigationItem key="navigationItem" id="e4F-ue-ymr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KES-ll-VJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="-449"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="03r-aW-S4k">
             <objects>
                 <viewController id="8Jq-gr-UTV" customClass="ProfileViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,14 +73,14 @@
                         <viewLayoutGuide key="safeArea" id="thi-Av-chX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dTn-nl-Lr9"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="dTn-nl-Lr9"/>
                     <navigationItem key="navigationItem" id="gMy-1V-8cz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msZ-21-msO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1639" y="-449"/>
         </scene>
-        <!--Item-->
+        <!--Notifications-->
         <scene sceneID="ix9-Us-EIA">
             <objects>
                 <viewController id="nZR-Nf-FgI" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="TmO-4N-RlA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="93J-Co-6rb"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="93J-Co-6rb"/>
                     <navigationItem key="navigationItem" id="7NR-O1-WxE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y51-sV-zkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
