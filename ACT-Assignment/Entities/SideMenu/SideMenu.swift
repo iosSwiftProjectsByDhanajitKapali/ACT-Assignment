@@ -60,9 +60,14 @@ class SideMenu: UIView{
         
         //animating the SideMenu
         mainView.center.x = -280
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
             self.mainView.center.x = 0
+        } completion: { (done) in
+            if done{
+                //do something after animation is completed
+            }
         }
+
         
         //resixing the imageView according to image
         resizeImageView(for: K.Image.AssetImage.MALE_USER!)
