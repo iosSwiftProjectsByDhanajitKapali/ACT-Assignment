@@ -57,7 +57,16 @@ class SideMenu: UIView{
         imageAndNameContainerView.layer.cornerRadius = 20.0
         imageAndNameContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
         
-        //animating the SideMenu
+        
+        animateShowMenu()
+        
+        //resixing the imageView according to image
+        resizeImageView(for: K.Image.AssetImage.MALE_USER!)
+        
+    }
+    
+    func animateShowMenu(){
+        //animating the appearance SideMenu
         mainView.center.x = -280
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
             self.mainView.center.x = 0
@@ -66,11 +75,18 @@ class SideMenu: UIView{
                 //do something after animation is completed
             }
         }
-
-        
-        //resixing the imageView according to image
-        resizeImageView(for: K.Image.AssetImage.MALE_USER!)
-        
+    }
+    
+    func animateHideMenu(){
+        //mainView.center.x = -280
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
+            self.mainView.center.x = -280
+        } completion: { (done) in
+            if done{
+                //do something after animation is completed
+                self.delegate?.dismissMenuWithTouch()
+            }
+        }
     }
     
     func loadViewFromNib(){
@@ -87,7 +103,7 @@ class SideMenu: UIView{
         if let touch = touches.first {
             if touch.view == self.xibMainView {
                 //calling delegate to dismiss menu
-                delegate?.dismissMenuWithTouch()
+                animateHideMenu()
             } else {
                 return
             }
