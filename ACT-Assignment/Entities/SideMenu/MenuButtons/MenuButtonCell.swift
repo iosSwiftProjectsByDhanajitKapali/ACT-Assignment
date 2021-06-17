@@ -7,25 +7,21 @@
 
 import UIKit
 
-protocol MenuButtonCellDelegate {
-    func menuButtonPressed(ofTitle : String?)
-}
+
 
 class MenuButtonCell: UITableViewCell {
 
-    @IBOutlet var buttonTitle: UIButton!
+   
+    @IBOutlet weak private var buttonTitleLabel: UILabel!
     
-    var delegate : MenuButtonCellDelegate?
+    func setButtonTitle(with title : String)  {
+        buttonTitleLabel.text = title
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    @IBAction func menuButtonPressed(_ sender: UIButton) {
-        delegate?.menuButtonPressed(ofTitle: sender.title(for: .normal) ?? nil)
-    }
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

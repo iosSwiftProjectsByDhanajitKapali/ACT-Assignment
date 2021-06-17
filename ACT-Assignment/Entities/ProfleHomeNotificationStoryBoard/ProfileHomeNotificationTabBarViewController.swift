@@ -17,6 +17,19 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
         //changing the navigation bar back button with menu image, clicking it XIB for Menu will appear
         let menuButton = UIBarButtonItem(image: K.Image.SystemImage.LIST_DASH , style: .done, target: self, action: #selector(didTapMenuButton))
         navigationItem.leftBarButtonItem  = menuButton
+        
+        
+//
+//        let ProfileVC = ProfileViewController()
+//        let HomeVC = HomeViewController()
+//        let NotificationVC = NotificationsViewController()
+//
+//
+//        ProfileVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.PROFILE_ICON, tag: 1)
+//        HomeVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.HOME_ICON, tag: 2)
+//        NotificationVC.tabBarItem = UITabBarItem.init(title: "Notification", image: K.Image.AssetImage.NOTIFICATION_ICON, tag: 3)
+//
+//        print("done adding icons")
     }
     
     enum MenuStatus{
@@ -66,7 +79,7 @@ extension ProfileHomeNotificationTabBarViewController : SideMenuDelegate {
             print(buttonTitle)
             
             //if Button pressed in Menu is Logout Button
-            if buttonTitle == "Logout"{
+            if buttonTitle == K.Title.ButtonTitle.LOGOUT_BUTTON{
                 navigationController?.popViewController(animated: true)
             }
         }

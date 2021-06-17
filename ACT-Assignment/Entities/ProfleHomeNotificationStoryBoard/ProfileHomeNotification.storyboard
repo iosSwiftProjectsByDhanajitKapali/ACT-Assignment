@@ -31,7 +31,7 @@
         <!--Home-->
         <scene sceneID="pf3-xG-0my">
             <objects>
-                <viewController id="OOw-ib-0AO" sceneMemberID="viewController">
+                <viewController id="OOw-ib-0AO" customClass="HomeViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCI-4J-Y7w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
         <!--Notifications-->
         <scene sceneID="ix9-Us-EIA">
             <objects>
-                <viewController id="nZR-Nf-FgI" sceneMemberID="viewController">
+                <viewController id="nZR-Nf-FgI" customClass="NotificationsViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IbP-Hb-laf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

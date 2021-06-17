@@ -25,6 +25,8 @@
 		01BE263C2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE263B2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift */; };
 		01BE265A267B47C800AF341E /* MenuButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE2658267B47C800AF341E /* MenuButtonCell.swift */; };
 		01BE265B267B47C800AF341E /* MenuButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BE2659267B47C800AF341E /* MenuButtonCell.xib */; };
+		01BE2662267B621A00AF341E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE2661267B621A00AF341E /* HomeViewController.swift */; };
+		01BE2667267B623000AF341E /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE2666267B623000AF341E /* NotificationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		01BE263B2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHomeNotificationTabBarViewController.swift; sourceTree = "<group>"; };
 		01BE2658267B47C800AF341E /* MenuButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonCell.swift; sourceTree = "<group>"; };
 		01BE2659267B47C800AF341E /* MenuButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuButtonCell.xib; sourceTree = "<group>"; };
+		01BE2661267B621A00AF341E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		01BE2666267B623000AF341E /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,8 @@
 		0139AB3C26771EF100CD61CC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				01BE2660267B61F600AF341E /* Notification Entity */,
+				01BE265F267B61E000AF341E /* Home Entity */,
 				01BE26192678CE9E00AF341E /* SideMenu */,
 				01BE26102678C73500AF341E /* ProfleHomeNotificationStoryBoard */,
 				01BE25B52678AB6A00AF341E /* Signup Entity */,
@@ -228,6 +234,22 @@
 				01BE2659267B47C800AF341E /* MenuButtonCell.xib */,
 			);
 			path = MenuButtons;
+			sourceTree = "<group>";
+		};
+		01BE265F267B61E000AF341E /* Home Entity */ = {
+			isa = PBXGroup;
+			children = (
+				01BE2661267B621A00AF341E /* HomeViewController.swift */,
+			);
+			path = "Home Entity";
+			sourceTree = "<group>";
+		};
+		01BE2660267B61F600AF341E /* Notification Entity */ = {
+			isa = PBXGroup;
+			children = (
+				01BE2666267B623000AF341E /* NotificationsViewController.swift */,
+			);
+			path = "Notification Entity";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,10 +388,12 @@
 				01BE25B72678AB8300AF341E /* SignUpViewController.swift in Sources */,
 				01BE263C2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift in Sources */,
 				01BE252C2677769600AF341E /* Constants.swift in Sources */,
+				01BE2667267B623000AF341E /* NotificationsViewController.swift in Sources */,
 				0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */,
 				01BE26312678D0AE00AF341E /* SideMenu.swift in Sources */,
 				0139AB0326771D4E00CD61CC /* AppDelegate.swift in Sources */,
 				01BE265A267B47C800AF341E /* MenuButtonCell.swift in Sources */,
+				01BE2662267B621A00AF341E /* HomeViewController.swift in Sources */,
 				01BE25E12678BDB500AF341E /* ProfileViewController.swift in Sources */,
 				0139AB0526771D4E00CD61CC /* SceneDelegate.swift in Sources */,
 				0139AB0D26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld in Sources */,

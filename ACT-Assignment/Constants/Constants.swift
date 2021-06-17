@@ -36,10 +36,19 @@ struct K {
             static let MALE_USER =  UIImage(named: "male-user")
             static let CLOSED_EYE_IMAGE = UIImage(named: "closedEye")
             static let OPEN_EYE_IMAGE = UIImage(named: "openEye")
+            static let PROFILE_ICON = UIImage(named: "profile-icon")
+            static let HOME_ICON = UIImage(named: "home-icon")
+            static let NOTIFICATION_ICON = UIImage(named: "notification-icon")
         }
        
         struct SystemImage {
             static let LIST_DASH = UIImage(systemName:"list.dash")
+        }
+    }
+    
+    struct Title {
+        struct ButtonTitle {
+            static let LOGOUT_BUTTON = "Logout"
         }
     }
     

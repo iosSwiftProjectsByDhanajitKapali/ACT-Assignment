@@ -13,16 +13,16 @@ protocol SideMenuDelegate {
 }
 class SideMenu: UIView{
     
-    @IBOutlet var xibMainView: UIView!
-    @IBOutlet var mainView: UIView!
-    @IBOutlet var imageAndNameContainerView: UIView!
-    @IBOutlet var userImageView: UIImageView!
-    @IBOutlet var userName: UILabel!
-    @IBOutlet var tableViewForMenuButtons: UITableView!
+    @IBOutlet weak private var xibMainView: UIView!
+    @IBOutlet weak private var mainView: UIView!
+    @IBOutlet weak private var imageAndNameContainerView: UIView!
+    @IBOutlet weak private var userImageView: UIImageView!
+    @IBOutlet weak private var userName: UILabel!
+    @IBOutlet weak private var tableViewForMenuButtons: UITableView!
     
     var delegate : SideMenuDelegate?
     
-    var menuButtonTitleArr = [String]()
+    private var menuButtonTitleArr = [String]()
 
     
     //Boilerplate to load xib
@@ -117,14 +117,6 @@ class SideMenu: UIView{
 
 }
 
-//MARK: - MenuButtonCell Delegate
-extension SideMenu : MenuButtonCellDelegate{
-    func menuButtonPressed(ofTitle: String?) {
-        if let title = ofTitle{
-            delegate?.menuButtonPressed(title)
-        }
-    }
-}
 
 //MARK: - UITableView DataSource and Delegate Methods
 extension SideMenu : UITableViewDelegate, UITableViewDataSource{
@@ -135,13 +127,13 @@ extension SideMenu : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewForMenuButtons.dequeueReusableCell(withIdentifier: K.TableViewCellID.MENU_BUTTON_CELL_ID , for: indexPath) as! MenuButtonCell
-        cell.buttonTitle.setTitle(menuButtonTitleArr[indexPath.row], for: .normal)
-        cell.delegate = self
+        cell.setButtonTitle(with: menuButtonTitleArr[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let row = indexPath.row
+        delegate?.menuButtonPressed(menuButtonTitleArr[row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -149,7 +141,7 @@ extension SideMenu : UITableViewDelegate, UITableViewDataSource{
     }
     
     func populateTableView(){
-        tableViewForMenuButtons.allowsSelection = true
+        //tableViewForMenuButtons.allowsSelection = true
         tableViewForMenuButtons.register(UINib(nibName: K.XibWithName.MENU_BUTTON_CELL, bundle: nil), forCellReuseIdentifier: K.TableViewCellID.MENU_BUTTON_CELL_ID)
         
         //Populating the menu buttons with random titles

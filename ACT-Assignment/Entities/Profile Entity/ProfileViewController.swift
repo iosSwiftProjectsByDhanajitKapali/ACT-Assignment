@@ -11,10 +11,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        //print("welcome to Profle View")
             
-        
+//        self.tabBarItem = UITabBarItem.init(title: "Profile" , image: UIImage(named: "profile-icon-25"), tag: 1)
     }
     
 
