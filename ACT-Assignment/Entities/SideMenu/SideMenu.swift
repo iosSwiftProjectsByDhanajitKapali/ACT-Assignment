@@ -22,9 +22,6 @@ class SideMenu: UIView{
     
     var delegate : SideMenuDelegate?
     
-    private var menuButtonTitleArr = [String]()
-
-    
     //Boilerplate to load xib
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -142,19 +139,19 @@ extension SideMenu : ProfileHomeNotificationTabBarViewControllerDelegate{
 //MARK: - UITableView DataSource and Delegate Methods
 extension SideMenu : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let rows = menuButtonTitleArr.count
+        let rows = K.Array.menuButtonTitleArr.count
         return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewForMenuButtons.dequeueReusableCell(withIdentifier: K.TableViewCellID.MENU_BUTTON_CELL_ID , for: indexPath) as! MenuButtonCell
-        cell.setButtonTitle(with: menuButtonTitleArr[indexPath.row])
+        cell.setButtonTitle(with: K.Array.menuButtonTitleArr[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        delegate?.menuButtonPressed(menuButtonTitleArr[row])
+        delegate?.menuButtonPressed(K.Array.menuButtonTitleArr[row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -164,13 +161,6 @@ extension SideMenu : UITableViewDelegate, UITableViewDataSource{
     func populateTableView(){
         //tableViewForMenuButtons.allowsSelection = true
         tableViewForMenuButtons.register(UINib(nibName: K.XibWithName.MENU_BUTTON_CELL, bundle: nil), forCellReuseIdentifier: K.TableViewCellID.MENU_BUTTON_CELL_ID)
-        
-        //Populating the menu buttons with random titles
-        menuButtonTitleArr.append("Button One")
-        menuButtonTitleArr.append("Button Two")
-        menuButtonTitleArr.append("Button Three")
-        menuButtonTitleArr.append("Button Four")
-        menuButtonTitleArr.append("Logout")
         
     }
 }

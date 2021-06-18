@@ -34,9 +34,9 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
             let HomeVC = tabBarVCs[1]
             let NotificationVC = tabBarVCs[2]
             
-            ProfileVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.PROFILE_ICON, tag: 1)
-            HomeVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.HOME_ICON, tag: 2)
-            NotificationVC.tabBarItem = UITabBarItem.init(title: "Notification", image: K.Image.AssetImage.NOTIFICATION_ICON, tag: 3)
+            ProfileVC.tabBarItem = UITabBarItem.init(title: K.Title.TabBarItem.PRFOFILE_TITLE , image: K.Image.AssetImage.PROFILE_ICON, tag: 1)
+            HomeVC.tabBarItem = UITabBarItem.init(title: K.Title.TabBarItem.HOME_TITLE , image: K.Image.AssetImage.HOME_ICON, tag: 2)
+            NotificationVC.tabBarItem = UITabBarItem.init(title: K.Title.TabBarItem.NOTIFICATION_TITLE , image: K.Image.AssetImage.NOTIFICATION_ICON, tag: 3)
         }
     }
     

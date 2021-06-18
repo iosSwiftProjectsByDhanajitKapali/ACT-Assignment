@@ -48,8 +48,19 @@ struct K {
     
     struct Title {
         struct ButtonTitle {
+            static let BUTTON_ONE = "Button One"
+            static let BUTTON_TWO = "Button Two"
+            static let BUTTON_THREE = "Button Three"
+            static let BUTTON_FOUR = "Button Four"
             static let LOGOUT_BUTTON = "Logout"
         }
+        struct TabBarItem {
+            static let PRFOFILE_TITLE = "Profile"
+            static let HOME_TITLE = "Home"
+            static let NOTIFICATION_TITLE = "Notifications"
+        }
+        
+      
     }
     
     struct TextMessage {
@@ -57,6 +68,10 @@ struct K {
         static let EMPTY_PASSWORD_MESSAGE = "Password can't be empty"
         static let EMPTY_MOBILE_NO_MESSAGE = "Mobile No. can't be empty"
         static let EMPTY_NAME_MESSAGE = "Name can't be empty"
+    }
+    
+    struct Array {
+        static let menuButtonTitleArr : [String] = ["Button one" , "Button Two" , "Button Three" , "Button Four", "Logout"]
     }
     
    
