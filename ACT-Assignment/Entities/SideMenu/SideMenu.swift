@@ -33,7 +33,6 @@ class SideMenu: UIView{
         setAllDelegates()
         populateTableView()
         addDesignToMenu()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,6 +43,7 @@ class SideMenu: UIView{
     func setAllDelegates(){
         tableViewForMenuButtons.delegate = self
         tableViewForMenuButtons.dataSource = self
+        ProfileHomeNotificationTabBarViewController.profileHomeNotificationTabBarViewControllerDelegate = self
     }
     
     func addDesignToMenu(){
@@ -56,7 +56,6 @@ class SideMenu: UIView{
         imageAndNameContainerView.clipsToBounds = true
         imageAndNameContainerView.layer.cornerRadius = 20.0
         imageAndNameContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        
         
         animateShowMenu()
         
@@ -78,7 +77,6 @@ class SideMenu: UIView{
     }
     
     func animateHideMenu(){
-        //mainView.center.x = -280
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
             self.mainView.center.x = -280
         } completion: { (done) in
@@ -133,6 +131,13 @@ class SideMenu: UIView{
 
 }
 
+
+//MARK: - ProfileHomeNotificationTabBarViewControllerDelegate
+extension SideMenu : ProfileHomeNotificationTabBarViewControllerDelegate{
+    func animateHideMenuOnMenuButtonClick() {
+        animateHideMenu()
+    }
+}
 
 //MARK: - UITableView DataSource and Delegate Methods
 extension SideMenu : UITableViewDelegate, UITableViewDataSource{

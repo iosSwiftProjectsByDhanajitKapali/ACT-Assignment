@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol ProfileHomeNotificationTabBarViewControllerDelegate{
+    func animateHideMenuOnMenuButtonClick()
+}
+
 class ProfileHomeNotificationTabBarViewController: UITabBarController {
 
     private var menuFlipper = MenuStatus.isClosed
+    static var profileHomeNotificationTabBarViewControllerDelegate : ProfileHomeNotificationTabBarViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,18 +23,21 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
         let menuButton = UIBarButtonItem(image: K.Image.SystemImage.LIST_DASH , style: .done, target: self, action: #selector(didTapMenuButton))
         navigationItem.leftBarButtonItem  = menuButton
         
-        
-//
-//        let ProfileVC = ProfileViewController()
-//        let HomeVC = HomeViewController()
-//        let NotificationVC = NotificationsViewController()
-//
-//
-//        ProfileVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.PROFILE_ICON, tag: 1)
-//        HomeVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.HOME_ICON, tag: 2)
-//        NotificationVC.tabBarItem = UITabBarItem.init(title: "Notification", image: K.Image.AssetImage.NOTIFICATION_ICON, tag: 3)
-//
-//        print("done adding icons")
+        setTabBarItemImage()
+    }
+    
+    func setTabBarItemImage(){
+        let tabBarVCArr = self.viewControllers
+        if let tabBarVCs = tabBarVCArr{
+            
+            let ProfileVC = tabBarVCs[0]
+            let HomeVC = tabBarVCs[1]
+            let NotificationVC = tabBarVCs[2]
+            
+            ProfileVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.PROFILE_ICON, tag: 1)
+            HomeVC.tabBarItem = UITabBarItem.init(title: "Profile" , image: K.Image.AssetImage.HOME_ICON, tag: 2)
+            NotificationVC.tabBarItem = UITabBarItem.init(title: "Notification", image: K.Image.AssetImage.NOTIFICATION_ICON, tag: 3)
+        }
     }
     
     enum MenuStatus{
@@ -42,7 +50,8 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
         if(menuFlipper == .isClosed){
             showMenu()
         }else{
-            hideMenu()
+            ProfileHomeNotificationTabBarViewController.profileHomeNotificationTabBarViewControllerDelegate?.animateHideMenuOnMenuButtonClick()
+            //hideMenu()
         }
        
     } //:didTapMenuButton
