@@ -93,6 +93,9 @@ extension ProfileHomeNotificationTabBarViewController : SideMenuDelegate {
                 navigationController?.popViewController(animated: true)
             }
             
+            if buttonTitle == K.Title.ButtonTitle.HOME {
+                self.selectedIndex = 1
+            }
         }
     }
     

@@ -157,6 +157,7 @@
 		0139AB3B26771EE000CD61CC /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
+				01BE26102678C73500AF341E /* ProfleHomeNotificationStoryBoard */,
 				0139AB0826771D4E00CD61CC /* Main.storyboard */,
 			);
 			path = StoryBoards;
@@ -168,7 +169,6 @@
 				01BE2660267B61F600AF341E /* Notification Entity */,
 				01BE265F267B61E000AF341E /* Home Entity */,
 				01BE26192678CE9E00AF341E /* SideMenu */,
-				01BE26102678C73500AF341E /* ProfleHomeNotificationStoryBoard */,
 				01BE25B52678AB6A00AF341E /* Signup Entity */,
 				01BE256C267891DF00AF341E /* Login Entity */,
 				01BE25E52678BDBB00AF341E /* Profile Entity */,
