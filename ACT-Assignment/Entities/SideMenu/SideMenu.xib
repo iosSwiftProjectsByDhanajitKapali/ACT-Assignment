@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideMenu" customModule="ACT_Assignment" customModuleProvider="target">
+            <connections>
+                <outlet property="imageAndNameContainerView" destination="pEK-oS-19l" id="Fam-IQ-yFa"/>
+                <outlet property="mainView" destination="irF-WW-Yb8" id="gFb-ky-g93"/>
+                <outlet property="tableViewForMenuButtons" destination="fkN-TD-hmg" id="rgF-cD-mtR"/>
+                <outlet property="userImageView" destination="ReH-yk-BlM" id="BsX-d8-QZW"/>
+                <outlet property="userName" destination="s5F-GE-1nb" id="J1g-xp-SDr"/>
+                <outlet property="xibMainView" destination="iN0-l3-epB" id="8hT-Pr-S17"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irF-WW-Yb8">
+                    <rect key="frame" x="0.0" y="44" width="314" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEK-oS-19l">
+                            <rect key="frame" x="0.0" y="0.0" width="314" height="180"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="male-user" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-yk-BlM">
+                                    <rect key="frame" x="109" y="10" width="96" height="96"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="ReH-yk-BlM" secondAttribute="height" multiplier="1:1" id="NxL-ty-qgQ"/>
+                                        <constraint firstAttribute="width" constant="96" id="hJR-Hm-Tcj"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First And Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5F-GE-1nb">
+                                    <rect key="frame" x="65.5" y="139" width="183" height="26"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                    <color key="textColor" red="0.90838557480000004" green="0.98195022340000004" blue="0.99585765599999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.44791221619999999" green="0.51332646609999999" blue="0.87962549919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="s5F-GE-1nb" secondAttribute="bottom" constant="15" id="1eq-P5-9jl"/>
+                                <constraint firstAttribute="height" constant="180" id="GYo-1N-gME"/>
+                                <constraint firstItem="ReH-yk-BlM" firstAttribute="top" secondItem="pEK-oS-19l" secondAttribute="top" constant="10" id="JWu-fP-UhN"/>
+                                <constraint firstItem="ReH-yk-BlM" firstAttribute="centerX" secondItem="pEK-oS-19l" secondAttribute="centerX" id="MH9-hF-N40"/>
+                                <constraint firstItem="s5F-GE-1nb" firstAttribute="top" secondItem="ReH-yk-BlM" secondAttribute="bottom" constant="33" id="ij0-8I-ve8"/>
+                                <constraint firstItem="s5F-GE-1nb" firstAttribute="centerX" secondItem="pEK-oS-19l" secondAttribute="centerX" id="vzY-AW-y9V"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fkN-TD-hmg">
+                            <rect key="frame" x="5" y="195" width="304" height="618"/>
+                            <color key="backgroundColor" red="0.61339461799999995" green="0.71734589339999999" blue="0.94056087730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.61339461799999995" green="0.71734589339999999" blue="0.94056087730000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="fkN-TD-hmg" firstAttribute="top" secondItem="pEK-oS-19l" secondAttribute="bottom" constant="15" id="62X-JW-2g3"/>
+                        <constraint firstItem="pEK-oS-19l" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" id="CB5-Zt-drg"/>
+                        <constraint firstAttribute="bottom" secondItem="fkN-TD-hmg" secondAttribute="bottom" constant="5" id="UcN-gx-58g"/>
+                        <constraint firstItem="pEK-oS-19l" firstAttribute="top" secondItem="irF-WW-Yb8" secondAttribute="top" id="Wth-VZ-pRW"/>
+                        <constraint firstAttribute="trailing" secondItem="pEK-oS-19l" secondAttribute="trailing" id="fU6-YV-bif"/>
+                        <constraint firstItem="fkN-TD-hmg" firstAttribute="leading" secondItem="irF-WW-Yb8" secondAttribute="leading" constant="5" id="ipE-ZZ-RMO"/>
+                        <constraint firstAttribute="trailing" secondItem="fkN-TD-hmg" secondAttribute="trailing" constant="5" id="nzM-Ot-eqc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="0.49688771412091676" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="irF-WW-Yb8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BXW-Ty-e5j"/>
+                <constraint firstItem="irF-WW-Yb8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TVe-MK-fSZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="irF-WW-Yb8" secondAttribute="trailing" constant="100" id="WcI-sc-pG2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="irF-WW-Yb8" secondAttribute="bottom" id="kgn-6q-sv9"/>
+            </constraints>
+            <point key="canvasLocation" x="11.594202898550726" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="male-user" width="96" height="96"/>
+    </resources>
+</document>

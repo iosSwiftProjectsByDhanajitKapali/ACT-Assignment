@@ -1,38 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "72892FAC-9373-43EE-9AC0-666C0FA67671"
+   uuid = "5F6FC29A-F547-4569-A593-6B1A68911151"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "880D7396-E964-41F2-8AB6-3450E29754CD"
+            uuid = "4E6DC2C3-BB75-4B6C-91A2-703A930A73A6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ACT-Assignment/Entities/Login Entity/LoginViewController.swift"
+            filePath = "ACT-Assignment/Entities/SideMenu/SideMenu.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "loginButtonPressed(_:)"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "populateTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "50A86FC0-321B-4FA7-864E-62D7F8514157"
+            uuid = "A2B5686E-1A95-419C-BB61-7AC3CBE875AE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ACT-Assignment/Entities/Login Entity/LoginViewController.swift"
+            filePath = "ACT-Assignment/Entities/ProfleHomeNotificationStoryBoard/ProfileHomeNotificationTabBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "loginButtonPressed(_:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "showMenu()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1F3B282-FECD-4930-AE67-9322D96C131A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ACT-Assignment/Entities/ProfleHomeNotificationStoryBoard/ProfileHomeNotificationTabBarViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "hideMenu()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

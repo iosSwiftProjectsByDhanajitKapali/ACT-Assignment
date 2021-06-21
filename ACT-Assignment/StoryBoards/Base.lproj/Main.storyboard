@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zy7-yi-Yrs" userLabel="EmailView">
                                         <rect key="frame" x="10" y="165.5" width="364" height="55"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-BU-qWr">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@g.com" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJO-BU-qWr">
                                                 <rect key="frame" x="10" y="0.0" width="344" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -46,7 +46,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0M-uN-FkY" userLabel="PasswordView">
                                         <rect key="frame" x="10" y="250.5" width="364" height="55"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-aa-mY1">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" placeholder="Enter Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-aa-mY1">
                                                 <rect key="frame" x="10" y="0.0" width="304" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -326,74 +326,6 @@
             </objects>
             <point key="canvasLocation" x="1421.7391304347827" y="79.6875"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="joS-cI-vgL">
-            <objects>
-                <viewController storyboardIdentifier="homeScene" id="ZEe-SI-MEv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FWW-c6-Jce">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="1u6-lg-VGy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="08X-Us-ovZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pfb-Cg-NCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1777" y="921"/>
-        </scene>
-        <!--Notifications-->
-        <scene sceneID="cqT-dk-40c">
-            <objects>
-                <viewController storyboardIdentifier="notificationsScene" id="b3H-jb-fYz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kML-oh-QPw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="mUt-uq-lQ7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Notifications" id="woR-wg-ase"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-oB-4uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2609" y="921"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="qN2-fw-WyA">
-            <objects>
-                <viewController storyboardIdentifier="profileScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R9T-89-fBC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6lg-fu-A8L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Y4u-yX-fQr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="rLN-Cs-aUU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sUl-se-L4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="933" y="921"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="qpj-n8-heJ">
-            <objects>
-                <tabBarController storyboardIdentifier="profileHomeNotificationTabBarScene" id="OYx-U6-z8z" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KQe-nV-DPP"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="px0-0l-xHr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="R9T-89-fBC" kind="relationship" relationship="viewControllers" id="FBD-D0-34G"/>
-                        <segue destination="ZEe-SI-MEv" kind="relationship" relationship="viewControllers" id="ZKt-HD-ype"/>
-                        <segue destination="b3H-jb-fYz" kind="relationship" relationship="viewControllers" id="1Ns-K5-h8R"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cx1-Ax-XYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2223" y="96"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sTE-lM-Gi1">
             <objects>
@@ -417,9 +349,6 @@
         <image name="openEye" width="96" height="96"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
