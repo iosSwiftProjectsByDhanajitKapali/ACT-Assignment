@@ -31,7 +31,7 @@
         <!--Home-->
         <scene sceneID="pf3-xG-0my">
             <objects>
-                <viewController id="OOw-ib-0AO" customClass="HomeViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeScene" id="OOw-ib-0AO" customClass="HomeViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCI-4J-Y7w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--Profile-->
         <scene sceneID="03r-aW-S4k">
             <objects>
-                <viewController id="8Jq-gr-UTV" customClass="ProfileViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileScene" id="8Jq-gr-UTV" customClass="ProfileViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pmf-cA-FVN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
         <!--Notifications-->
         <scene sceneID="ix9-Us-EIA">
             <objects>
-                <viewController id="nZR-Nf-FgI" customClass="NotificationsViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notificationsScene" id="nZR-Nf-FgI" customClass="NotificationsViewController" customModule="ACT_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IbP-Hb-laf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

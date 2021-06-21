@@ -49,7 +49,7 @@ struct K {
     struct Title {
         struct ButtonTitle {
             static let BUTTON_ONE = "Button One"
-            static let BUTTON_TWO = "Button Two"
+            static let HOME = "Home"
             static let BUTTON_THREE = "Button Three"
             static let BUTTON_FOUR = "Button Four"
             static let LOGOUT_BUTTON = "Logout"
@@ -71,7 +71,7 @@ struct K {
     }
     
     struct Array {
-        static let menuButtonTitleArr : [String] = ["Button one" , "Button Two" , "Button Three" , "Button Four", "Logout"]
+        static let menuButtonTitleArr : [String] = [K.Title.ButtonTitle.BUTTON_ONE , K.Title.ButtonTitle.HOME, K.Title.ButtonTitle.BUTTON_THREE , K.Title.ButtonTitle.BUTTON_FOUR , K.Title.ButtonTitle.LOGOUT_BUTTON]
     }
     
    

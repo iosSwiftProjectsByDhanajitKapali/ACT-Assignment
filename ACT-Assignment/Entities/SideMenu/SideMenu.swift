@@ -151,7 +151,15 @@ extension SideMenu : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        delegate?.menuButtonPressed(K.Array.menuButtonTitleArr[row])
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut) {
+            self.mainView.center.x = -280
+        } completion: { (done) in
+            if done{
+                //do something after animation is completed
+                self.delegate?.dismissMenuWithTouch()
+                self.delegate?.menuButtonPressed(K.Array.menuButtonTitleArr[row])
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

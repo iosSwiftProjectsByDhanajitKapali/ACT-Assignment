@@ -11,6 +11,11 @@ protocol ProfileHomeNotificationTabBarViewControllerDelegate{
     func animateHideMenuOnMenuButtonClick()
 }
 
+enum MenuStatus{
+    case isOpened
+    case isClosed
+}
+
 class ProfileHomeNotificationTabBarViewController: UITabBarController {
 
     private var menuFlipper = MenuStatus.isClosed
@@ -40,10 +45,6 @@ class ProfileHomeNotificationTabBarViewController: UITabBarController {
         }
     }
     
-    enum MenuStatus{
-        case isOpened
-        case isClosed
-    }
     
     //Opening the Menu and closing it, if it is already open
     @objc func didTapMenuButton() {
@@ -91,6 +92,7 @@ extension ProfileHomeNotificationTabBarViewController : SideMenuDelegate {
             if buttonTitle == K.Title.ButtonTitle.LOGOUT_BUTTON{
                 navigationController?.popViewController(animated: true)
             }
+            
         }
     }
     
