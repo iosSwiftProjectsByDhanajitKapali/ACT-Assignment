@@ -16,6 +16,8 @@
 		0139AB1226771D5500CD61CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0139AB1026771D5500CD61CC /* LaunchScreen.storyboard */; };
 		0139AB1D26771D5700CD61CC /* ACT_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB1C26771D5700CD61CC /* ACT_AssignmentTests.swift */; };
 		0139AB2826771D5700CD61CC /* ACT_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139AB2726771D5700CD61CC /* ACT_AssignmentUITests.swift */; };
+		016BA6AF2680ECE80010613D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA6AE2680ECE80010613D /* NetworkManager.swift */; };
+		016BA6B42680FE650010613D /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA6B32680FE650010613D /* ProfilePresenter.swift */; };
 		01BE252C2677769600AF341E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE252B2677769500AF341E /* Constants.swift */; };
 		01BE25B72678AB8300AF341E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE25B62678AB8300AF341E /* SignUpViewController.swift */; };
 		01BE25E12678BDB500AF341E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE25E02678BDB500AF341E /* ProfileViewController.swift */; };
@@ -62,6 +64,8 @@
 		0139AB2326771D5700CD61CC /* ACT-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ACT-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0139AB2726771D5700CD61CC /* ACT_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACT_AssignmentUITests.swift; sourceTree = "<group>"; };
 		0139AB2926771D5700CD61CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016BA6AE2680ECE80010613D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		016BA6B32680FE650010613D /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		01BE252B2677769500AF341E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		01BE25B62678AB8300AF341E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		01BE25E02678BDB500AF341E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			children = (
 				0139AB0226771D4E00CD61CC /* AppDelegate.swift */,
 				0139AB0426771D4E00CD61CC /* SceneDelegate.swift */,
+				016BA6AD2680ECB40010613D /* Network Manager */,
 				01BE25BE2678AB8F00AF341E /* Constants */,
 				0139AB3C26771EF100CD61CC /* Entities */,
 				0139AB3B26771EE000CD61CC /* StoryBoards */,
@@ -176,6 +181,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		016BA6AD2680ECB40010613D /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				016BA6AE2680ECE80010613D /* NetworkManager.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
 		01BE256C267891DF00AF341E /* Login Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				01BE25E02678BDB500AF341E /* ProfileViewController.swift */,
+				016BA6B32680FE650010613D /* ProfilePresenter.swift */,
 			);
 			path = "Profile Entity";
 			sourceTree = "<group>";
@@ -388,12 +402,14 @@
 				01BE25B72678AB8300AF341E /* SignUpViewController.swift in Sources */,
 				01BE263C2679AB8B00AF341E /* ProfileHomeNotificationTabBarViewController.swift in Sources */,
 				01BE252C2677769600AF341E /* Constants.swift in Sources */,
+				016BA6AF2680ECE80010613D /* NetworkManager.swift in Sources */,
 				01BE2667267B623000AF341E /* NotificationsViewController.swift in Sources */,
 				0139AB0726771D4E00CD61CC /* LoginViewController.swift in Sources */,
 				01BE26312678D0AE00AF341E /* SideMenu.swift in Sources */,
 				0139AB0326771D4E00CD61CC /* AppDelegate.swift in Sources */,
 				01BE265A267B47C800AF341E /* MenuButtonCell.swift in Sources */,
 				01BE2662267B621A00AF341E /* HomeViewController.swift in Sources */,
+				016BA6B42680FE650010613D /* ProfilePresenter.swift in Sources */,
 				01BE25E12678BDB500AF341E /* ProfileViewController.swift in Sources */,
 				0139AB0526771D4E00CD61CC /* SceneDelegate.swift in Sources */,
 				0139AB0D26771D4E00CD61CC /* ACT_Assignment.xcdatamodeld in Sources */,

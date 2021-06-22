@@ -62,18 +62,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djB-fD-FKu">
-                                <rect key="frame" x="294" y="464" width="110" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l41-9N-s7u">
+                                <rect key="frame" x="173.5" y="559" width="67" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="8Jq-gr-UTV" eventType="touchUpInside" id="aTt-Dx-7Gd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTe-MB-Y27">
+                                <rect key="frame" x="179.5" y="460" width="55" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Get"/>
+                                <connections>
+                                    <action selector="getButtonPressed:" destination="8Jq-gr-UTV" eventType="touchUpInside" id="ecs-6n-FER"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="thi-Av-chX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="thi-Av-chX" firstAttribute="bottom" secondItem="djB-fD-FKu" secondAttribute="bottom" constant="300" id="2pd-Pf-kpl"/>
-                            <constraint firstItem="thi-Av-chX" firstAttribute="trailing" secondItem="djB-fD-FKu" secondAttribute="trailing" constant="10" id="xLS-gq-KA3"/>
+                            <constraint firstItem="thi-Av-chX" firstAttribute="bottom" secondItem="l41-9N-s7u" secondAttribute="bottom" constant="200" id="0Nr-d1-Pj9"/>
+                            <constraint firstItem="l41-9N-s7u" firstAttribute="top" secondItem="NTe-MB-Y27" secondAttribute="bottom" constant="45" id="4bL-io-MM2"/>
+                            <constraint firstItem="l41-9N-s7u" firstAttribute="centerX" secondItem="pmf-cA-FVN" secondAttribute="centerX" id="EbZ-u0-2Yr"/>
+                            <constraint firstItem="NTe-MB-Y27" firstAttribute="centerX" secondItem="pmf-cA-FVN" secondAttribute="centerX" id="e8U-wc-tqN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="dTn-nl-Lr9"/>
