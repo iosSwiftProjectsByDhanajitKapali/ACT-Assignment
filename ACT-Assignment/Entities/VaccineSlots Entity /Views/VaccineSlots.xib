@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VaccineSlots" customModule="ACT_Assignment" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="flA-5F-sgz" id="ED2-qR-SfY"/>
+                <outlet property="datePicker" destination="xnD-ci-XCX" id="rz6-af-mw9"/>
+                <outlet property="pincodeTextField" destination="iNg-3e-94k" id="i0F-Y3-BpN"/>
+                <outlet property="searchSlotsButton" destination="hGN-cG-JNX" id="nj0-kU-dXg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Pin Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNg-3e-94k">
+                    <rect key="frame" x="20" y="104" width="374" height="39.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pincode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-fG-HlT">
+                    <rect key="frame" x="20" y="64" width="88" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btb-6O-wkp">
+                    <rect key="frame" x="20" y="163.5" width="51" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="xnD-ci-XCX">
+                    <rect key="frame" x="20" y="203.5" width="374" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Zi0-JS-lDX"/>
+                    </constraints>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-cG-JNX">
+                    <rect key="frame" x="121" y="283.5" width="172" height="46"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" title="Search Slots">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="searchSlotsButton:" destination="-1" eventType="touchUpInside" id="HJZ-mE-uGd"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="flA-5F-sgz">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iNg-3e-94k" firstAttribute="top" secondItem="n8B-fG-HlT" secondAttribute="bottom" constant="10" id="0BV-4J-gap"/>
+                <constraint firstItem="btb-6O-wkp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="EeU-zO-Elj"/>
+                <constraint firstItem="btb-6O-wkp" firstAttribute="top" secondItem="iNg-3e-94k" secondAttribute="bottom" constant="20" id="FhM-sa-SCM"/>
+                <constraint firstItem="n8B-fG-HlT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Ih9-v7-4JY"/>
+                <constraint firstItem="iNg-3e-94k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Mg2-Yd-89C"/>
+                <constraint firstItem="xnD-ci-XCX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ow4-Cz-JxV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iNg-3e-94k" secondAttribute="trailing" constant="20" id="Vxe-zJ-dfB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xnD-ci-XCX" secondAttribute="trailing" constant="20" id="aTL-VE-TtU"/>
+                <constraint firstItem="xnD-ci-XCX" firstAttribute="top" secondItem="btb-6O-wkp" secondAttribute="bottom" constant="10" id="awc-qf-1wE"/>
+                <constraint firstItem="hGN-cG-JNX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="b6s-F6-oYY"/>
+                <constraint firstItem="n8B-fG-HlT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="e02-Ad-8JY"/>
+                <constraint firstItem="hGN-cG-JNX" firstAttribute="top" secondItem="xnD-ci-XCX" secondAttribute="bottom" constant="25" id="h7W-KK-Zck"/>
+                <constraint firstItem="flA-5F-sgz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pZ5-bf-kUb"/>
+                <constraint firstItem="flA-5F-sgz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yHl-50-yZu"/>
+            </constraints>
+            <point key="canvasLocation" x="102.89855072463769" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

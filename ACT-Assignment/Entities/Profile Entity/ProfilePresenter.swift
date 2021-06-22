@@ -128,14 +128,5 @@ struct MessageResponse : Codable {
 }
 
 
-//Temporary strcuts for VaccineCenters
-struct VaccineCenters : Codable{
-    let sessions : [CenterDetails]
-}
-
-struct CenterDetails : Codable{
-    let center_id : Int
-    let name : String
-}
 
 
