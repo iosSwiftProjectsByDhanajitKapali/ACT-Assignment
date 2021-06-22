@@ -78,6 +78,9 @@
                                     <action selector="getButtonPressed:" destination="8Jq-gr-UTV" eventType="touchUpInside" id="ecs-6n-FER"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="csh-5S-DVa">
+                                <rect key="frame" x="188.5" y="393" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="thi-Av-chX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -85,11 +88,16 @@
                             <constraint firstItem="thi-Av-chX" firstAttribute="bottom" secondItem="l41-9N-s7u" secondAttribute="bottom" constant="200" id="0Nr-d1-Pj9"/>
                             <constraint firstItem="l41-9N-s7u" firstAttribute="top" secondItem="NTe-MB-Y27" secondAttribute="bottom" constant="45" id="4bL-io-MM2"/>
                             <constraint firstItem="l41-9N-s7u" firstAttribute="centerX" secondItem="pmf-cA-FVN" secondAttribute="centerX" id="EbZ-u0-2Yr"/>
+                            <constraint firstItem="NTe-MB-Y27" firstAttribute="top" secondItem="csh-5S-DVa" secondAttribute="bottom" constant="30" id="ZeA-EO-DBj"/>
                             <constraint firstItem="NTe-MB-Y27" firstAttribute="centerX" secondItem="pmf-cA-FVN" secondAttribute="centerX" id="e8U-wc-tqN"/>
+                            <constraint firstItem="csh-5S-DVa" firstAttribute="centerX" secondItem="pmf-cA-FVN" secondAttribute="centerX" id="vLN-3X-rBV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="dTn-nl-Lr9"/>
                     <navigationItem key="navigationItem" id="gMy-1V-8cz"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="csh-5S-DVa" id="xvp-8e-dzY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msZ-21-msO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
