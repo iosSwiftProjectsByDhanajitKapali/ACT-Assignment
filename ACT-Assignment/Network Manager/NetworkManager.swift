@@ -12,17 +12,16 @@ struct NetworkManager{
         
         URLSession.shared.dataTask(with: forUrl) { (data, response, error) in
             
-            guard error == nil else{
+            if let _ = error {
                 print(K.ErrorMessage.API_CALL_ERROR)
                 completionHandler(.failure(.error(err: error!.localizedDescription)))
-                return
             }
-            guard data != nil else{
+            guard let _ = data else{
                 print(K.ErrorMessage.NO_DATA_RECIEVED)
                 completionHandler(.failure(.invalidData))
                 return
             }
-            guard response != nil else{
+            guard let _ = response else{
                 print(K.ErrorMessage.INVALID_RESPONSE)
                 completionHandler(.failure(.invalidResponse))
                 return
@@ -31,7 +30,6 @@ struct NetworkManager{
                 let result = try JSONDecoder().decode(T.self, from: data!)
                 completionHandler(.success(result))
                // print(result)
-                
                 
             }catch let err{
                 print("\(K.ErrorMessage.JSON_PARSING_ERROR) ->\(err.localizedDescription)")
@@ -50,26 +48,23 @@ struct NetworkManager{
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             
-            guard error == nil else{
-                print("\(K.ErrorMessage.API_CALL_ERROR)")
+            if let _ = error{
+                print(K.ErrorMessage.API_CALL_ERROR)
                 completionHandler(.failure(.error(err: error!.localizedDescription)))
-                return
             }
-            guard data != nil else{
-                print("\(K.ErrorMessage.NO_DATA_RECIEVED)")
+            guard let _ = data else{
+                print(K.ErrorMessage.NO_DATA_RECIEVED)
                 completionHandler(.failure(.invalidData))
                 return
             }
-            guard response != nil else{
-                print("\(K.ErrorMessage.INVALID_RESPONSE)")
+            guard let _ = response else{
+                print(K.ErrorMessage.INVALID_RESPONSE)
                 return
             }
             do{
                 let result = try JSONDecoder().decode(T.self, from: data!)
-//                _ = completionHandler(result, .success)
                 completionHandler(.success(result))
                // print(result)
-                
                 
             }catch let err{
                 print("\(K.ErrorMessage.JSON_PARSING_ERROR) ->\(err.localizedDescription)")
