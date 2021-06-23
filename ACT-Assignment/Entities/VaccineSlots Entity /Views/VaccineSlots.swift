@@ -14,9 +14,11 @@ class VaccineSlots: UIView {
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var searchSlotsButton: UIButton!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var centerDetailsTableView: UITableView!
     
     private var dateSelected : String?
     private var presenter : VaccineSlotPresenter!
+    private var centerDetails = [CenterDetails]()
     
     //Boilerplate to load xib
     override init(frame: CGRect) {
@@ -52,8 +54,13 @@ class VaccineSlots: UIView {
         datePicker.preferredDatePickerStyle = .compact
         datePicker.addTarget(self, action: #selector(dateSetter), for: .valueChanged)
         
-        //setting delegate
+        //setting self as ddelegate of presenter
         presenter = VaccineSlotPresenter(withDelegate: self)
+        
+        //setting delegates and datasource of TableView
+        centerDetailsTableView.delegate = self
+        centerDetailsTableView.dataSource = self
+        centerDetailsTableView.register(UITableViewCell.self, forCellReuseIdentifier: K.TableViewCellID.CENTER_DETAILS_CELL_ID)
         
         //hiding the activityIndicator
         activityIndicator.isHidden = true
@@ -83,8 +90,16 @@ class VaccineSlots: UIView {
 }
 
 extension VaccineSlots : VaccineSlotPresenterDelegate{
-    func presentVaccinationCenterDetails(centers: [VaccineCenters]) {
-        print(centers.count)
+    func presentVaccinationCenterDetails(centers: VaccineCenters) {
+        centerDetails = centers.sessions
+//        for i in 0...centerDetails.sessions.count-1{
+//            print(centerDetails.sessions[i].name)
+//            print("\n")
+//        }
+        print(centerDetails.count)
+        DispatchQueue.main.async {
+            self.centerDetailsTableView.reloadData()
+        }
     }
     
     func presentAlert(title: String, message: String) {
@@ -112,6 +127,22 @@ extension VaccineSlots : VaccineSlotPresenterDelegate{
             self.activityIndicator.isHidden = true
             self.activityIndicator.stopAnimating()
         }
+    }
+    
+}
+
+
+extension VaccineSlots : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return centerDetails.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = centerDetailsTableView.dequeueReusableCell(withIdentifier: K.TableViewCellID.CENTER_DETAILS_CELL_ID, for: indexPath)
+        cell.textLabel?.text = centerDetails[indexPath.row].name
+        cell.detailTextLabel?.text = String(centerDetails[indexPath.row].center_id)
+            
+        return cell
     }
     
     

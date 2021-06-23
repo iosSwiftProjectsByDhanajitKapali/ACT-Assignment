@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VaccineSlots" customModule="ACT_Assignment" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="flA-5F-sgz" id="ED2-qR-SfY"/>
+                <outlet property="centerDetailsTableView" destination="X69-dz-0Pv" id="Q78-EQ-z90"/>
                 <outlet property="datePicker" destination="xnD-ci-XCX" id="rz6-af-mw9"/>
                 <outlet property="pincodeTextField" destination="iNg-3e-94k" id="i0F-Y3-BpN"/>
                 <outlet property="searchSlotsButton" destination="hGN-cG-JNX" id="nj0-kU-dXg"/>
@@ -44,6 +45,10 @@
                         <constraint firstAttribute="height" constant="55" id="Zi0-JS-lDX"/>
                     </constraints>
                 </datePicker>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X69-dz-0Pv">
+                    <rect key="frame" x="0.0" y="349.5" width="414" height="512.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-cG-JNX">
                     <rect key="frame" x="121" y="283.5" width="172" height="46"/>
                     <color key="backgroundColor" systemColor="linkColor"/>
@@ -65,8 +70,10 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="iNg-3e-94k" firstAttribute="top" secondItem="n8B-fG-HlT" secondAttribute="bottom" constant="10" id="0BV-4J-gap"/>
+                <constraint firstItem="X69-dz-0Pv" firstAttribute="top" secondItem="hGN-cG-JNX" secondAttribute="bottom" constant="20" id="7s6-iO-a9T"/>
                 <constraint firstItem="btb-6O-wkp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="EeU-zO-Elj"/>
                 <constraint firstItem="btb-6O-wkp" firstAttribute="top" secondItem="iNg-3e-94k" secondAttribute="bottom" constant="20" id="FhM-sa-SCM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="X69-dz-0Pv" secondAttribute="bottom" id="Hdp-QR-Z3N"/>
                 <constraint firstItem="n8B-fG-HlT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Ih9-v7-4JY"/>
                 <constraint firstItem="iNg-3e-94k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Mg2-Yd-89C"/>
                 <constraint firstItem="xnD-ci-XCX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ow4-Cz-JxV"/>
@@ -77,6 +84,8 @@
                 <constraint firstItem="n8B-fG-HlT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="e02-Ad-8JY"/>
                 <constraint firstItem="hGN-cG-JNX" firstAttribute="top" secondItem="xnD-ci-XCX" secondAttribute="bottom" constant="25" id="h7W-KK-Zck"/>
                 <constraint firstItem="flA-5F-sgz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pZ5-bf-kUb"/>
+                <constraint firstItem="X69-dz-0Pv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rqO-zh-TFm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X69-dz-0Pv" secondAttribute="trailing" id="upJ-9D-ocb"/>
                 <constraint firstItem="flA-5F-sgz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yHl-50-yZu"/>
             </constraints>
             <point key="canvasLocation" x="102.89855072463769" y="95.758928571428569"/>

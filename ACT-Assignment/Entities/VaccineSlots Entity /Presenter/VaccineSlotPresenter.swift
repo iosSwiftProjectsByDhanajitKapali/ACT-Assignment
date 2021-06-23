@@ -10,7 +10,7 @@ import Foundation
 protocol VaccineSlotPresenterDelegate : AnyObject{
     func presentAlert(title : String, message : String)
     func stopAndHideLoader()
-    func presentVaccinationCenterDetails(centers : [VaccineCenters])
+    func presentVaccinationCenterDetails(centers : VaccineCenters)
 }
 
 class VaccineSlotPresenter{
@@ -30,10 +30,7 @@ class VaccineSlotPresenter{
         NetworkManager().getApiData(forUrl: url!, resultType: VaccineCenters.self) { (result) in
             switch result{
             case .success(let details):
-                for i in 0...details.sessions.count-1{
-                    print(details.sessions[i].name)
-                    print("\n")
-                }
+                self.delegate?.presentVaccinationCenterDetails(centers: details)
                 self.delegate?.stopAndHideLoader()
             case .failure(let error):
                 print(error.localizedDescription)

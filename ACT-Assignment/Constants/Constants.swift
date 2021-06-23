@@ -29,6 +29,7 @@ struct K {
     
     struct TableViewCellID {
         static let MENU_BUTTON_CELL_ID = "menuButtonCellID"
+        static let CENTER_DETAILS_CELL_ID = "centerDetailsCell"
     }
     
     struct Image {
